@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ПГУТИ - Навигация</title>
+    <title>ПГУТИ - вторая тема для друпал</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -187,17 +187,106 @@
     </header>
 
     <main class="main-content">
-        <div class="container">
-            <h1>О университете</h1>
-            <div class="breadcrumb">
-                <a href="#home">Главная</a>
-                <span class="separator">/</span>
-                <span class="current">О университете</span>
+        <!-- HERO SLIDER -->
+        <section class="hero-slider">
+            <!-- Статичная иллюстрация -->
+            <div class="hero-illustration">
+                <img src="./img/slider.svg" alt="Университет">
             </div>
-        </div>
+
+            <!-- Контент слайдера -->
+            <div class="slider-content">
+                <!-- Обёртка слайдов -->
+                <div class="slides-wrapper">
+                    <!-- Слайд 1 -->
+                    <div class="slide active">
+                        <div class="container">
+                            <div class="slide-text">
+                                <span class="slide-tag">ПГУТИ</span>
+                                <h1>Ведущий технический университет связи</h1>
+                                <p>Более 70 лет мы готовим специалистов в области телекоммуникаций, IT и информатики.
+                                    Присоединяйтесь к нашему сообществу!</p>
+                                <div class="slide-buttons">
+                                    <a href="#admissions" class="btn btn-primary">Поступить</a>
+                                    <a href="#about" class="btn btn-outline">Об университете</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 2 -->
+                    <div class="slide">
+                        <div class="container">
+                            <div class="slide-text">
+                                <span class="slide-tag">Образование</span>
+                                <h1>Современные программы обучения</h1>
+                                <p>Бакалавриат, магистратура, аспирантура по самым востребованным направлениям
+                                    подготовки.</p>
+                                <div class="slide-buttons">
+                                    <a href="#programs" class="btn btn-primary">Программы</a>
+                                    <a href="#schedule" class="btn btn-outline">Расписание</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 3 -->
+                    <div class="slide">
+                        <div class="container">
+                            <div class="slide-text">
+                                <span class="slide-tag">Наука</span>
+                                <h1>Инновации и исследования</h1>
+                                <p>Научные лаборатории, гранты, публикации в ведущих журналах и международное
+                                    сотрудничество.</p>
+                                <div class="slide-buttons">
+                                    <a href="#science" class="btn btn-primary">Наука</a>
+                                    <a href="#labs" class="btn btn-outline">Лаборатории</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Прогресс-бар -->
+                <div class="slider-progress" id="sliderProgress"></div>
+
+                <!-- Управление -->
+                <div class="slider-controls">
+                    <div class="slider-dots">
+                        <button class="dot active" data-slide="0"></button>
+                        <button class="dot" data-slide="1"></button>
+                        <button class="dot" data-slide="2"></button>
+                    </div>
+
+                    <div class="slider-nav">
+                        <button class="nav-btn" id="prevSlide" aria-label="Предыдущий">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="nav-btn" id="nextSlide" aria-label="Следующий">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <button class="pause-btn" id="pauseBtn" aria-label="Пауза">
+                        <svg class="pause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="6" y="4" width="4" height="16"></rect>
+                            <rect x="14" y="4" width="4" height="16"></rect>
+                        </svg>
+                        <svg class="play-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="display:none;">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
