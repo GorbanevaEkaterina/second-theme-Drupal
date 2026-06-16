@@ -1628,3 +1628,509 @@ height: 491px;
         font-size: 14px;
     }
 }
+/* Секция уведомлений */
+.notifications {
+    padding: 80px 20px;
+    background-color: var(--color-white);
+}
+
+.notifications .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Заголовок с декоративными полосками */
+.block-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+}
+
+.block-title::before,
+.block-title::after {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    height: 2px;
+}
+
+.block-title::before {
+    background-color: var(--color-accent);
+    width: 16px;
+    left: 0;
+}
+
+.block-title::after {
+    background-color: var(--color-primary);
+    left: 18px;
+    width: 3rem;
+}
+
+/* Обёртка двух колонок */
+.notifications-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Список уведомлений */
+.notifications-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Отдельное уведомление */
+.notification-item {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(12, 66, 111, 0.2);
+}
+
+.notification-item:first-child {
+    padding-top: 0;
+}
+
+.notification-item:last-child {
+    border-bottom: 1px solid rgba(12, 66, 111, 0.2);
+}
+
+/* Заголовок уведомления */
+.notification-title {
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--color-primary);
+    text-decoration: none;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.notification-title:hover {
+    color: var(--color-primary-hover);
+    text-decoration: underline;
+}
+
+/* Активное (первое) уведомление — жирный синий */
+.notification-title--active {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.notification-title--active:hover {
+    color: var(--color-primary-hover);
+}
+
+/* Дата уведомления */
+.notification-date {
+    font-size: 15px;
+    color: var(--color-text-light);
+    font-weight: 400;
+}
+
+/* Блок с иллюстрацией */
+.notifications-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--color-primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.notifications-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 992px) {
+    .notifications {
+        padding: 60px 20px;
+    }
+
+    .block-title {
+        font-size: 36px;
+    }
+
+    .notifications-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .notifications-image {
+        min-height: 350px;
+        order: -1;
+    }
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 576px) {
+    .notifications {
+        padding: 40px 15px;
+    }
+
+    .block-title {
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+
+    .notifications-wrapper {
+        gap: 30px;
+    }
+
+    .notification-item {
+        padding: 16px 0;
+    }
+
+    .notification-title {
+        font-size: 15px;
+    }
+
+    .notification-date {
+        font-size: 13px;
+    }
+
+    .notifications-image {
+        min-height: 250px;
+    }
+}
+/* Секция блога */
+.blog-section {
+    padding: 80px 20px;
+    background-color: var(--color-white);
+    font-family: var(--font-family);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Заголовок секции с декоративными полосками */
+.block-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+}
+
+.block-title::before,
+.block-title::after {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 0;
+    height: 2px;
+}
+
+.block-title::before {
+    background-color: var(--color-accent);
+    width: 16px;
+}
+
+.block-title::after {
+    background-color: var(--color-primary);
+    left: 18px;
+    width: 3rem;
+}
+
+/* Сетка блога */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Карточка блога */
+.blog-card {
+    background: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed) ease, 
+                box-shadow var(--transition-speed) ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(12, 66, 111, 0.2);
+}
+
+.blog-card-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.blog-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-speed) ease;
+}
+
+.blog-card:hover .blog-card-image img {
+    transform: scale(1.05);
+}
+
+.blog-card-content {
+    padding: 25px;
+}
+
+.blog-card-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-primary);
+    line-height: 1.4;
+    margin: 0;
+    transition: color var(--transition-speed) ease;
+}
+
+.blog-card:hover .blog-card-content h3 {
+    color: var(--color-primary-hover);
+}
+
+/* Кнопка */
+.blog-button-wrapper {
+    text-align: center;
+}
+
+.btn-blog {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--font-family);
+    transition: background-color var(--transition-speed) ease, 
+                transform 0.2s ease;
+}
+
+.btn-blog:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .blog-section {
+        padding: 60px 20px;
+    }
+
+    .block-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .blog-card-image {
+        height: 200px;
+    }
+
+    .blog-card-content h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .block-title {
+        font-size: 28px;
+    }
+
+    .blog-card-content {
+        padding: 20px;
+    }
+
+    .blog-card-content h3 {
+        font-size: 16px;
+    }
+
+    .btn-blog {
+        padding: 12px 30px;
+        font-size: 15px;
+    }
+}
+/* Дата новости */
+.news-date {
+    font-size: 14px;
+    color: var(--color-text-light);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.blog-card-content h3 a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    transition: color var(--transition-speed) ease;
+}
+
+.blog-card:hover .blog-card-content h3 a {
+    color: var(--color-primary-hover);
+}
+/* Секция стипендий */
+.scholarships-section {
+    padding: 80px 20px;
+    background-color: var(--color-white);
+    font-family: var(--font-family);
+}
+
+.scholarships-intro {
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+.scholarships-intro p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* Сетка стипендий */
+.scholarships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Карточка стипендии */
+.scholarship-card {
+    background: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed) ease, 
+                box-shadow var(--transition-speed) ease;
+}
+
+.scholarship-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(12, 66, 111, 0.2);
+}
+
+.scholarship-card-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.scholarship-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-speed) ease;
+}
+
+.scholarship-card:hover .scholarship-card-image img {
+    transform: scale(1.05);
+}
+
+.scholarship-card-content {
+    padding: 25px;
+}
+
+.scholarship-card-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-primary);
+    line-height: 1.4;
+    margin: 0;
+    transition: color var(--transition-speed) ease;
+}
+
+.scholarship-card:hover .scholarship-card-content h3 {
+    color: var(--color-primary-hover);
+}
+
+/* Кнопка */
+.scholarships-button-wrapper {
+    text-align: center;
+}
+
+.btn-scholarships {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--font-family);
+    transition: background-color var(--transition-speed) ease, 
+                transform 0.2s ease;
+}
+
+.btn-scholarships:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .scholarships-section {
+        padding: 60px 20px;
+    }
+
+    .scholarships-intro {
+        margin-bottom: 40px;
+    }
+
+    .scholarships-intro p {
+        font-size: 15px;
+    }
+
+    .scholarships-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .scholarship-card-image {
+        height: 200px;
+    }
+
+    .scholarship-card-content h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scholarships-intro p {
+        font-size: 14px;
+    }
+
+    .scholarship-card-content {
+        padding: 20px;
+    }
+
+    .scholarship-card-content h3 {
+        font-size: 16px;
+    }
+
+    .btn-scholarships {
+        padding: 12px 30px;
+        font-size: 15px;
+    }
+}
