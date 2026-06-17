@@ -2004,7 +2004,46 @@ height: 491px;
     font-size: 16px;
     line-height: 1.7;
     color: var(--color-text);
-    margin: 0;
+    margin: 0 0 20px 0;
+}
+
+.scholarships-intro p:last-child {
+    margin-bottom: 0;
+}
+
+/* Список ресурсов */
+.scholarships-intro ul {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.scholarships-intro ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text);
+}
+
+.scholarships-intro ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.scholarships-intro ul li strong {
+    color: var(--color-primary);
+    font-weight: 600;
+    transition: color var(--transition-speed) ease;
+}
+
+.scholarships-intro ul li:hover strong {
+    color: var(--color-primary-hover);
 }
 
 /* Сетка стипендий */
@@ -2102,6 +2141,11 @@ height: 491px;
         font-size: 15px;
     }
 
+    .scholarships-intro ul li {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
     .scholarships-grid {
         grid-template-columns: 1fr;
         gap: 25px;
@@ -2121,6 +2165,11 @@ height: 491px;
         font-size: 14px;
     }
 
+    .scholarships-intro ul li {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
     .scholarship-card-content {
         padding: 20px;
     }
@@ -2132,5 +2181,335 @@ height: 491px;
     .btn-scholarships {
         padding: 12px 30px;
         font-size: 15px;
+    }
+}
+/* ===== ФУТЕР ===== */
+.footer {
+    font-family: var(--font-family);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Верхняя секция --- */
+.footer-top {
+    background-color: var(--color-primary-dark);
+    padding: 50px 0;
+}
+
+.footer-top-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.footer-about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo-wrapper {
+    margin-bottom: 16px;
+}
+
+.footer-about-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0 0 16px 0;
+}
+
+.footer-read-more {
+    font-size: 15px;
+    color: var(--color-white);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-white);
+    padding-bottom: 2px;
+    transition: color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+.footer-read-more:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+/* Ссылки */
+.footer-links-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-link-item {
+    font-size: 16px;
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    line-height: 1.5;
+    transition: color var(--transition-speed) ease;
+}
+
+.footer-link-item:first-child {
+    padding-top: 0;
+}
+
+.footer-link-item:hover {
+    color: var(--color-accent);
+}
+
+/* Контакты */
+.footer-contacts-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-contact-item:first-child {
+    padding-top: 0;
+}
+
+.footer-contact-item:last-child {
+    border-bottom: none;
+}
+
+.footer-icon {
+    flex-shrink: 0;
+}
+
+/* --- Средняя секция --- */
+.footer-middle {
+    background-color: var(--color-primary);
+    padding: 50px 0;
+}
+
+.footer-middle-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 1200px) {
+    .footer-middle-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-middle-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-middle-container {
+        grid-template-columns: 1fr;
+    }
+}
+.footer-contact-block {
+    margin-bottom: 20px;
+}
+
+.footer-contact-block:last-child {
+    margin-bottom: 0;
+}
+
+.footer-contact-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 8px;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 12px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+}
+
+.footer-contact-item span {
+    display: block;
+}
+.footer-nav-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0 0 25px 0;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.footer-nav-title::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background-color: var(--color-accent);
+    border-radius: 2px;
+}
+
+.footer-nav-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-primary-dark);
+    border-radius: 2px;
+}
+.footer-nav-link {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: color var(--transition-speed) ease, padding-left var(--transition-speed) ease;
+}
+
+.footer-nav-link:first-of-type {
+    padding-top: 0;
+}
+
+.footer-nav-link:hover {
+    color: var(--color-accent);
+    padding-left: 8px;
+}
+
+/* --- Нижняя секция --- */
+.footer-bottom {
+    background-color: var(--color-primary-dark);
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary-dark);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, transform 0.2s ease;
+}
+
+.footer-social-link:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+.footer-scroll-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-primary);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform 0.2s ease;
+}
+
+.footer-scroll-top:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 992px) {
+    .footer-top-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .footer-about {
+        grid-column: 1 / -1;
+    }
+
+  
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        padding: 40px 0;
+    }
+
+    .footer-top-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-about {
+        grid-column: auto;
+    }
+
+    .footer-middle {
+        padding: 40px 0;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+   
+
+    .footer-bottom-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-socials {
+        justify-content: center;
     }
 }
