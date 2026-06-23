@@ -14,7 +14,8 @@
         initCounters();
         initScrollAnimations();
         initFooterExpand();
-        initLoadMore();
+        initPagination();
+        initScrollTop();
     });
 
     // ===== МОБИЛЬНОЕ МЕНЮ =====
@@ -26,14 +27,12 @@
 
         if (!mobileToggle || !navMenu) return;
 
-        // Переключение мобильного меню
         mobileToggle.addEventListener('click', (e) => {
             e.stopPropagation();
             navMenu.classList.toggle('active');
             mobileToggle.classList.toggle('active');
         });
 
-        // Переключение подменю на мобильных
         dropdownItems.forEach(item => {
             const link = item.querySelector('.nav-link');
             if (!link) return;
@@ -45,18 +44,15 @@
                 }
             });
 
-            // Подменю для mega-menu
             initMegaMenuSubmenus(item, BREAKPOINT);
         });
 
-        // Закрытие меню при клике вне
         document.addEventListener('click', (e) => {
             if (!e.target.closest('.main-nav')) {
                 closeMobileMenu(navMenu, mobileToggle, dropdownItems);
             }
         });
 
-        // Сброс при ресайзе
         let resizeTimer;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimer);
@@ -165,7 +161,6 @@
         }
 
         bindEvents() {
-            // Точки навигации
             this.dots.forEach(dot => {
                 dot.addEventListener('click', (e) => {
                     const target = parseInt(e.target.dataset.slide);
@@ -177,7 +172,6 @@
                 });
             });
 
-            // Стрелки
             this.prevBtn?.addEventListener('click', () => {
                 if (!this.isAnimating) {
                     this.userInteracted = true;
@@ -194,10 +188,8 @@
                 }
             });
 
-            // Кнопка паузы
             this.pauseBtn?.addEventListener('click', () => this.toggleAutoplay());
 
-            // Пауза при наведении
             const slider = document.querySelector('.hero-slider');
             if (slider) {
                 slider.addEventListener('mouseenter', () => {
@@ -227,7 +219,7 @@
                 next.classList.add('prev');
             }
 
-            void next.offsetWidth; // Force reflow
+            void next.offsetWidth;
 
             setTimeout(() => {
                 next.classList.add('active');
@@ -381,10 +373,10 @@
         });
     }
 
-    // ===== FOOTER: РАСКРЫВАЮЩИЙСЯ БЛОК (ИСПРАВЛЕНО) =====
+    // ===== FOOTER: РАСКРЫВАЮЩИЙСЯ БЛОК =====
     function initFooterExpand() {
         const toggleBtn = document.querySelector('.footer-read-more');
-        const expandContent = document.getElementById('about-expand'); // Переименовано
+        const expandContent = document.getElementById('about-expand');
         const textSpan = toggleBtn?.querySelector('.read-more-text');
 
         if (!toggleBtn || !expandContent) {
@@ -406,10 +398,8 @@
     }
 
     function collapseExpand(block, btn, textSpan) {
-        // Фиксируем текущую высоту для плавного сворачивания
         block.style.maxHeight = block.scrollHeight + 'px';
-        block.offsetHeight; // Force reflow
-        
+        block.offsetHeight;
         block.style.maxHeight = '0px';
         block.classList.remove('is-open');
         
@@ -426,7 +416,6 @@
         block.setAttribute('aria-hidden', 'false');
         if (textSpan) textSpan.textContent = 'свернуть..';
 
-        // После завершения анимации снимаем фиксированную высоту
         const onTransitionEnd = () => {
             if (btn.getAttribute('aria-expanded') === 'true') {
                 block.style.maxHeight = 'none';
@@ -436,42 +425,114 @@
         block.addEventListener('transitionend', onTransitionEnd);
     }
 
-    // ===== BLOG: LOAD MORE =====
-    function initLoadMore() {
-        const loadMoreBtn = document.getElementById('loadMoreBtn');
-        const hiddenCards = document.querySelectorAll('.blog-card[data-hidden="true"]');
-        const cardsToShow = 3;
-        let currentIndex = 0;
-
-        if (!loadMoreBtn || hiddenCards.length === 0) return;
-
-        loadMoreBtn.addEventListener('click', (e) => {
-            e.preventDefault();
+    // ===== NEWS: PAGINATION =====
+    function initPagination() {
+        const newsGrid = document.getElementById('newsGrid');
+        const pagination = document.getElementById('newsPagination');
+        
+        if (!newsGrid || !pagination) return;
+        
+        const cards = Array.from(newsGrid.querySelectorAll('.news-card'));
+        const cardsPerPage = 3;
+        const totalPages = Math.ceil(cards.length / cardsPerPage);
+        let currentPage = 1;
+        
+        function showPage(page) {
+            if (page < 1 || page > totalPages) return;
             
-            const nextCards = Array.from(hiddenCards).slice(currentIndex, currentIndex + cardsToShow);
+            currentPage = page;
             
-            nextCards.forEach((card, index) => {
+            cards.forEach(card => {
+                card.style.display = 'none';
+            });
+            
+            const startIndex = (page - 1) * cardsPerPage;
+            const endIndex = startIndex + cardsPerPage;
+            const visibleCards = cards.slice(startIndex, endIndex);
+            
+            visibleCards.forEach((card, index) => {
                 setTimeout(() => {
                     card.style.display = 'block';
-                    card.removeAttribute('data-hidden');
-                    
-                    // Анимация появления
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
-                    card.offsetHeight; // Force reflow
-                    
-                    card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
+                    card.style.animation = 'none';
+                    setTimeout(() => {
+                        card.style.animation = 'fadeInUp 0.6s ease forwards';
+                    }, 10);
                 }, index * 100);
             });
             
-            currentIndex += cardsToShow;
+            updatePaginationButtons();
+            newsGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        function updatePaginationButtons() {
+            const buttons = pagination.querySelectorAll('.pagination-btn[data-page]');
+            const nextBtn = pagination.querySelector('.pagination-next');
+            const lastBtn = pagination.querySelector('.pagination-last');
             
-            if (currentIndex >= hiddenCards.length) {
-                loadMoreBtn.style.display = 'none';
+            buttons.forEach(btn => {
+                const page = parseInt(btn.dataset.page);
+                btn.classList.toggle('active', page === currentPage);
+            });
+            
+            if (nextBtn) nextBtn.disabled = currentPage >= totalPages;
+            if (lastBtn) lastBtn.disabled = currentPage >= totalPages;
+        }
+        
+        pagination.addEventListener('click', (e) => {
+            const btn = e.target.closest('.pagination-btn');
+            if (!btn || btn.disabled) return;
+            
+            const action = btn.dataset.action;
+            const page = btn.dataset.page ? parseInt(btn.dataset.page) : null;
+            
+            if (action === 'next') {
+                showPage(currentPage + 1);
+            } else if (action === 'last') {
+                showPage(totalPages);
+            } else if (page) {
+                showPage(page);
             }
         });
+        
+        showPage(1);
+    }
+
+    // ===== SCROLL TO TOP =====
+    function initScrollTop() {
+        const scrollTopBtn = document.querySelector('.footer-scroll-top');
+        
+        if (!scrollTopBtn) return;
+        
+        scrollTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Показывать/скрывать кнопку при скролле
+        const threshold = 400;
+        
+        const handleScroll = () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > threshold) {
+                scrollTopBtn.style.opacity = '1';
+                scrollTopBtn.style.visibility = 'visible';
+                scrollTopBtn.style.transform = 'translateY(0)';
+            } else {
+                scrollTopBtn.style.opacity = '0';
+                scrollTopBtn.style.visibility = 'hidden';
+                scrollTopBtn.style.transform = 'translateY(20px)';
+            }
+        };
+        
+        // Инициализация
+        handleScroll();
+        scrollTopBtn.style.transition = 'opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease';
+        
+        window.addEventListener('scroll', handleScroll, { passive: true });
     }
 
 })();
