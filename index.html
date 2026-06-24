@@ -4,15 +4,72 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>ПГУТИ - Поволжский государственный университет телекоммуникаций и информатики | Официальный сайт</title>
+    <meta name="description"
+        content="ПГУТИ - ведущий технический университет связи России. Образовательные программы, приёмная комиссия, расписание, научные исследования. Более 70 лет подготовки специалистов в области телекоммуникаций и IT." />
+    <meta name="keywords"
+        content="ПГУТИ, университет связи, телекоммуникации, IT образование, Самара, приёмная комиссия, бакалавриат, магистратура" />
+    <meta name="author" content="ПГУТИ" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.psuti.ru/" />
+    <!-- Open Graph для ВКонтакте -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.psuti.ru/" />
+    <meta property="og:title" content="ПГУТИ — Университет связи и IT в Самаре | Поступление 2026" />
+    <meta property="og:description"
+        content="Поволжский государственный университет телекоммуникаций и информатики. 70+ лет подготовки специалистов. IT, телекоммуникации, кибербезопасность. Бакалавриат, магистратура, аспирантура. Приёмная комиссия: +7 (846) 332-45-00" />
+    <meta property="og:image" content="https://www.psuti.ru/img/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="ПГУТИ" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <!-- Favicon -->
+    <link rel="icon" href="./img/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="./img/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png" />
+
+    <!-- Preconnect для шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap"
         rel="stylesheet">
-    <link rel="icon" href="./img/favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>ПГУТИ - вторая тема для друпал</title>
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Schema.org микроразметка -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Поволжский государственный университет телекоммуникаций и информатики",
+        "alternateName": "ПГУТИ",
+        "url": "https://www.psuti.ru",
+        "logo": "https://www.psuti.ru/sites/default/files/pguti70-mini-chb-belyy-sayt.png",
+        "description": "Ведущий технический университет связи России",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Льва Толстого, 23",
+            "addressLocality": "Самара",
+            "postalCode": "443010",
+            "addressCountry": "RU"
+        },
+        "telephone": "+7-846-332-45-00",
+        "email": "psuti@psuti.ru",
+        "foundingDate": "1956",
+        "sameAs": [
+            "https://vk.com/psuti",
+            "https://t.me/psuti"
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -21,27 +78,29 @@
         <div class="container">
             <div class="top-bar-content">
                 <div class="top-bar-links">
-                    <a href="#" class="top-bar-link">Student Login</a>
-                    <a href="#" class="top-bar-link">Alumni</a>
-                    <a href="#" class="top-bar-link">Log in</a>
+                    <a href="#" class="top-bar-link">Вход для студентов</a>
+                    <a href="#" class="top-bar-link">Выпускникам</a>
+                    <a href="#" class="top-bar-link">Войти</a>
                 </div>
                 <div class="language-selector">
-                    <button class="language-btn">
-                        <span>English</span>
+                    <button class="language-btn" aria-label="Выбор языка">
+                        <span>Русский</span>
                         <i class="fas fa-chevron-up"></i>
                     </button>
                 </div>
             </div>
         </div>
     </div>
-    <header class="header">
+
+    <header class="header" role="banner">
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo-link">
+                <a href="https://www.psuti.ru/" class="logo-link" aria-label="ПГУТИ - Главная страница">
                     <img src="https://www.psuti.ru/sites/default/files/pguti70-mini-chb-belyy-sayt.png"
-                        alt="Логотип ПГУТИ" class="logo-img" />
+                        alt="Логотип ПГУТИ - Поволжский государственный университет телекоммуникаций и информатики"
+                        class="logo-img" width="150" height="50" />
                 </a>
-                <nav class="main-nav">
+                <nav class="main-nav" role="navigation" aria-label="Главное меню">
                     <ul class="nav-menu">
                         <li class="nav-item has-dropdown">
                             <a href="#about" class="nav-link">
@@ -49,19 +108,11 @@
                                 <span class="dropdown-icon">+</span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#about-us" class="dropdown-link">Об университете</a>
-                                </li>
+                                <li><a href="#about-us" class="dropdown-link">Об университете</a></li>
                                 <li><a href="#history" class="dropdown-link">История</a></li>
-                                <li>
-                                    <a href="#mission" class="dropdown-link">Миссия и ценности</a>
-                                </li>
-                                <li>
-                                    <a href="#administration" class="dropdown-link">Руководство</a>
-                                </li>
-                                <li>
-                                    <a href="#documents" class="dropdown-link">Документы</a>
-                                </li>
+                                <li><a href="#mission" class="dropdown-link">Миссия и ценности</a></li>
+                                <li><a href="#administration" class="dropdown-link">Руководство</a></li>
+                                <li><a href="#documents" class="dropdown-link">Документы</a></li>
                             </ul>
                         </li>
 
@@ -71,18 +122,10 @@
                                 <span class="dropdown-icon">+</span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#bachelor" class="dropdown-link">Бакалавриат</a>
-                                </li>
-                                <li>
-                                    <a href="#master" class="dropdown-link">Магистратура</a>
-                                </li>
-                                <li>
-                                    <a href="#specialist" class="dropdown-link">Специалитет</a>
-                                </li>
-                                <li>
-                                    <a href="#postgraduate" class="dropdown-link">Аспирантура</a>
-                                </li>
+                                <li><a href="#bachelor" class="dropdown-link">Бакалавриат</a></li>
+                                <li><a href="#master" class="dropdown-link">Магистратура</a></li>
+                                <li><a href="#specialist" class="dropdown-link">Специалитет</a></li>
+                                <li><a href="#postgraduate" class="dropdown-link">Аспирантура</a></li>
                             </ul>
                         </li>
 
@@ -92,15 +135,9 @@
                                 <span class="dropdown-icon">+</span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#programs" class="dropdown-link">Программы</a>
-                                </li>
-                                <li>
-                                    <a href="#schedule" class="dropdown-link">Расписание</a>
-                                </li>
-                                <li>
-                                    <a href="#calendar" class="dropdown-link">Учебный календарь</a>
-                                </li>
+                                <li><a href="#programs" class="dropdown-link">Программы</a></li>
+                                <li><a href="#schedule" class="dropdown-link">Расписание</a></li>
+                                <li><a href="#calendar" class="dropdown-link">Учебный календарь</a></li>
                             </ul>
                         </li>
 
@@ -116,15 +153,9 @@
                                         <span class="submenu-icon">+</span>
                                     </a>
                                     <ul class="submenu">
-                                        <li>
-                                            <a href="#labs" class="dropdown-link">Лаборатории</a>
-                                        </li>
-                                        <li>
-                                            <a href="#projects" class="dropdown-link">Проекты</a>
-                                        </li>
-                                        <li>
-                                            <a href="#publications" class="dropdown-link">Публикации</a>
-                                        </li>
+                                        <li><a href="#labs" class="dropdown-link">Лаборатории</a></li>
+                                        <li><a href="#projects" class="dropdown-link">Проекты</a></li>
+                                        <li><a href="#publications" class="dropdown-link">Публикации</a></li>
                                     </ul>
                                 </li>
                                 <li class="mega-menu-column">
@@ -133,15 +164,9 @@
                                         <span class="submenu-icon">+</span>
                                     </a>
                                     <ul class="submenu">
-                                        <li>
-                                            <a href="#upcoming" class="dropdown-link">Предстоящие</a>
-                                        </li>
-                                        <li>
-                                            <a href="#archive" class="dropdown-link">Архив</a>
-                                        </li>
-                                        <li>
-                                            <a href="#partners" class="dropdown-link">Партнёры</a>
-                                        </li>
+                                        <li><a href="#upcoming" class="dropdown-link">Предстоящие</a></li>
+                                        <li><a href="#archive" class="dropdown-link">Архив</a></li>
+                                        <li><a href="#partners" class="dropdown-link">Партнёры</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -153,15 +178,9 @@
                                 <span class="dropdown-icon">+</span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#clubs" class="dropdown-link">Клубы и секции</a>
-                                </li>
-                                <li>
-                                    <a href="#events" class="dropdown-link">Мероприятия</a>
-                                </li>
-                                <li>
-                                    <a href="#dormitory" class="dropdown-link">Общежитие</a>
-                                </li>
+                                <li><a href="#clubs" class="dropdown-link">Клубы и секции</a></li>
+                                <li><a href="#events" class="dropdown-link">Мероприятия</a></li>
+                                <li><a href="#dormitory" class="dropdown-link">Общежитие</a></li>
                             </ul>
                         </li>
 
@@ -174,14 +193,14 @@
                         </li>
                     </ul>
 
-                    <button class="search-toggle" aria-label="Поиск">
+                    <button class="search-toggle" aria-label="Поиск по сайту">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="11" cy="11" r="8"></circle>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                         </svg>
                     </button>
 
-                    <button class="mobile-toggle" aria-label="Меню">
+                    <button class="mobile-toggle" aria-label="Открыть меню">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="3" y1="6" x2="21" y2="6"></line>
                             <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -193,60 +212,55 @@
         </div>
     </header>
 
-    <main class="main-content">
+    <main class="main-content" role="main">
         <!-- HERO SLIDER -->
-        <section class="hero-slider">
-            <!-- Статичная иллюстрация -->
+        <section class="hero-slider" aria-label="Главный слайдер">
             <div class="hero-illustration">
-                <img src="./img/slider.svg" alt="Университет">
+                <img src="./img/slider.svg" alt="Иллюстрация университета ПГУТИ" loading="lazy" width="600"
+                    height="400">
             </div>
 
-            <!-- Контент слайдера -->
             <div class="slider-content">
-                <!-- Обёртка слайдов -->
                 <div class="slides-wrapper">
-                    <!-- Слайд 1 -->
                     <div class="slide active">
                         <div class="container">
                             <div class="slide-text">
                                 <span class="slide-tag">ПГУТИ</span>
-                                <h1>Ведущий технический университет связи</h1>
+                                <h1>Ведущий технический университет связи России</h1>
                                 <p>Более 70 лет мы готовим специалистов в области телекоммуникаций, IT и информатики.
                                     Присоединяйтесь к нашему сообществу!</p>
                                 <div class="slide-buttons">
-                                    <a href="#admissions" class="btn btn-primary">Поступить</a>
+                                    <a href="#admissions" class="btn btn-primary">Поступить в ПГУТИ</a>
                                     <a href="#about" class="btn btn-outline">Об университете</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Слайд 2 -->
                     <div class="slide">
                         <div class="container">
                             <div class="slide-text">
                                 <span class="slide-tag">Образование</span>
-                                <h1>Современные программы обучения</h1>
+                                <h1>Современные программы обучения в ПГУТИ</h1>
                                 <p>Бакалавриат, магистратура, аспирантура по самым востребованным направлениям
                                     подготовки.</p>
                                 <div class="slide-buttons">
-                                    <a href="#programs" class="btn btn-primary">Программы</a>
-                                    <a href="#schedule" class="btn btn-outline">Расписание</a>
+                                    <a href="#programs" class="btn btn-primary">Программы обучения</a>
+                                    <a href="#schedule" class="btn btn-outline">Расписание занятий</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Слайд 3 -->
                     <div class="slide">
                         <div class="container">
                             <div class="slide-text">
                                 <span class="slide-tag">Наука</span>
-                                <h1>Инновации и исследования</h1>
+                                <h1>Инновации и научные исследования</h1>
                                 <p>Научные лаборатории, гранты, публикации в ведущих журналах и международное
                                     сотрудничество.</p>
                                 <div class="slide-buttons">
-                                    <a href="#science" class="btn btn-primary">Наука</a>
+                                    <a href="#science" class="btn btn-primary">Научная деятельность</a>
                                     <a href="#labs" class="btn btn-outline">Лаборатории</a>
                                 </div>
                             </div>
@@ -254,31 +268,29 @@
                     </div>
                 </div>
 
-                <!-- Прогресс-бар -->
                 <div class="slider-progress" id="sliderProgress"></div>
 
-                <!-- Управление -->
                 <div class="slider-controls">
                     <div class="slider-dots">
-                        <button class="dot active" data-slide="0"></button>
-                        <button class="dot" data-slide="1"></button>
-                        <button class="dot" data-slide="2"></button>
+                        <button class="dot active" data-slide="0" aria-label="Перейти к слайду 1"></button>
+                        <button class="dot" data-slide="1" aria-label="Перейти к слайду 2"></button>
+                        <button class="dot" data-slide="2" aria-label="Перейти к слайду 3"></button>
                     </div>
 
                     <div class="slider-nav">
-                        <button class="nav-btn" id="prevSlide" aria-label="Предыдущий">
+                        <button class="nav-btn" id="prevSlide" aria-label="Предыдущий слайд">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="15 18 9 12 15 6"></polyline>
                             </svg>
                         </button>
-                        <button class="nav-btn" id="nextSlide" aria-label="Следующий">
+                        <button class="nav-btn" id="nextSlide" aria-label="Следующий слайд">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
                         </button>
                     </div>
 
-                    <button class="pause-btn" id="pauseBtn" aria-label="Пауза">
+                    <button class="pause-btn" id="pauseBtn" aria-label="Приостановить слайдер">
                         <svg class="pause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="6" y="4" width="4" height="16"></rect>
                             <rect x="14" y="4" width="4" height="16"></rect>
@@ -291,31 +303,36 @@
                 </div>
             </div>
         </section>
-        <section class="about-section">
+
+        <section class="about-section" aria-labelledby="about-title">
             <div class="container">
                 <div class="about-wrapper">
                     <div class="about-images">
-                        <img src="./img/campus1.jpg" alt="Выпускник ПГУТИ" class="img-main">
+                        <img src="./img/campus1.jpg" alt="Выпускник ПГУТИ в университетской форме" class="img-main"
+                            loading="lazy" width="400" height="300">
                         <div class="img-side">
-                            <img src="./img/campus2.jpg" alt="Здание ПГУТИ">
-                            <img src="./img/campus3.jpg" alt="Кампус ПГУТИ">
+                            <img src="./img/campus2.jpg" alt="Главное здание ПГУТИ в Самаре" loading="lazy" width="200"
+                                height="150">
+                            <img src="./img/campus3.jpg" alt="Кампус ПГУТИ - учебные корпуса" loading="lazy" width="200"
+                                height="150">
                         </div>
                     </div>
 
                     <div class="about-content">
                         <h3 class="section-subtitle">О университете</h3>
-                        <h2 class="section-title">ПГУТИ</h2>
+                        <h2 class="section-title" id="about-title">ПГУТИ - Поволжский государственный университет
+                            телекоммуникаций и информатики</h2>
 
                         <p class="section-text">
                             Поволжский государственный университет телекоммуникаций и информатики — один из ведущих
-                            технических вузов России. Основанный в 1982 году, ПГУТИ создал прочную традицию
+                            технических вузов России. Основанный в 1956 году, ПГУТИ создал прочную традицию
                             академического превосходства, инноваций и динамичной университетской среды, которая
                             вдохновляет на любознательность и обучение на протяжении всей жизни.
                         </p>
 
                         <div class="section-buttons">
                             <a href="#about" class="btn btn-primary">
-                                <span>Узнайте больше о нас</span>
+                                <span>Узнайте больше о ПГУТИ</span>
                                 <svg class="arrow-icon" width="18" height="18" viewBox="0 0 20 20" fill="none">
                                     <path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" stroke-width="2"
                                         stroke-linecap="round" stroke-linejoin="round" />
@@ -333,113 +350,20 @@
                 </div>
             </div>
         </section>
-        <section class="events-section">
+
+        <section class="events-section" aria-labelledby="events-title">
             <div class="container">
-                <h2 class="section-title">
+                <h2 class="section-title" id="events-title">
                     <span class="title-line"></span>
-                    Университетские мероприятия
+                    Университетские мероприятия ПГУТИ
                 </h2>
 
                 <div class="events-wrapper">
-                    <!-- Календарь -->
                     <div class="calendar-illustration">
-                        <img src="./img/events.svg" class="calendar-illustration" />
-                        <!-- <svg width="600" height="491" viewBox="0 0 600 491" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <rect x="7.94324" y="162.287" width="559" height="329"
-                                transform="rotate(-5.49296 7.94324 162.287)" fill="#EDE1D5" />
-                            <path
-                                d="M3.06132 111.521C2.00399 100.526 10.06 90.7559 21.055 89.6986L537.672 40.0181C548.667 38.9608 558.437 47.0168 559.494 58.0118L564.376 108.778L7.94322 162.287L3.06132 111.521Z"
-                                fill="#FFB81C" />
-                            <rect x="55.6083" y="187.842" width="70" height="70"
-                                transform="rotate(-5.49296 55.6083 187.842)" fill="#0c426f" />
-                            <rect x="155.149" y="178.27" width="70" height="70"
-                                transform="rotate(-5.49296 155.149 178.27)" fill="#0c426f" />
-                            <rect x="254.69" y="168.697" width="70" height="70"
-                                transform="rotate(-5.49296 254.69 168.697)" fill="#0c426f" />
-                            <rect x="354.231" y="159.125" width="70" height="70"
-                                transform="rotate(-5.49296 354.231 159.125)" fill="#0c426f" />
-                            <rect x="453.771" y="149.552" width="70" height="70"
-                                transform="rotate(-5.49296 453.771 149.552)" fill="#0c426f" />
-
-                            <rect x="65.1807" y="287.383" width="70" height="70"
-                                transform="rotate(-5.49296 65.1807 287.383)" fill="#0c426f" />
-                            <rect x="164.721" y="277.81" width="70" height="70"
-                                transform="rotate(-5.49296 164.721 277.81)" fill="#0c426f" />
-                            <rect x="264.262" y="268.238" width="70" height="70"
-                                transform="rotate(-5.49296 264.262 268.238)" fill="#0c426f" />
-                            <rect x="363.803" y="258.666" width="70" height="70"
-                                transform="rotate(-5.49296 363.803 258.666)" fill="#0c426f" />
-                            <rect x="463.344" y="249.093" width="70" height="70"
-                                transform="rotate(-5.49296 463.344 249.093)" fill="#0c426f" />
-
-                            <rect x="74.7529" y="386.923" width="70" height="70"
-                                transform="rotate(-5.49296 74.7529 386.923)" fill="#0c426f" />
-                            <rect x="174.294" y="377.351" width="70" height="70"
-                                transform="rotate(-5.49296 174.294 377.351)" fill="#0c426f" />
-                            <rect x="273.835" y="367.779" width="70" height="70"
-                                transform="rotate(-5.49296 273.835 367.779)" fill="#0c426f" />
-                            <rect x="373.375" y="358.206" width="70" height="70"
-                                transform="rotate(-5.49296 373.375 358.206)" fill="#0c426f" />
-                            <rect x="472.916" y="348.634" width="70" height="70"
-                                transform="rotate(-5.49296 472.916 348.634)" fill="#0c426f" />
-
-                            <rect x="54.7644" y="43.2585" width="18" height="86" rx="9"
-                                transform="rotate(-5.49296 54.7644 43.2585)" fill="#062844" />
-                            <rect x="125.438" y="36.4622" width="18" height="86" rx="9"
-                                transform="rotate(-5.49296 125.438 36.4622)" fill="#062844" />
-                            <rect x="196.112" y="29.6658" width="18" height="86" rx="9"
-                                transform="rotate(-5.49296 196.112 29.6658)" fill="#062844" />
-                            <rect x="266.786" y="22.8694" width="18" height="86" rx="9"
-                                transform="rotate(-5.49296 266.786 22.8694)" fill="#062844" />
-                            <rect x="337.46" y="16.073" width="18" height="86" rx="9"
-                                transform="rotate(-5.49296 337.46 16.073)" fill="#062844" />
-                            <rect x="408.134" y="9.27661" width="18" height="86" rx="9"
-                                transform="rotate(-5.49296 408.134 9.27661)" fill="#062844" />
-                            <rect x="478.808" y="2.48047" width="18" height="86" rx="9"
-                                transform="rotate(-5.49296 478.808 2.48047)" fill="#062844" />
-
-                            <line x1="166.635" y1="193.239" x2="218.396" y2="188.261" stroke="white" stroke-width="4"
-                                stroke-linecap="round" />
-                            <line x1="168.262" y1="210.161" x2="220.023" y2="205.183" stroke="white" stroke-width="4"
-                                stroke-linecap="round" />
-                            <line x1="169.889" y1="227.082" x2="221.65" y2="222.105" stroke="white" stroke-width="4"
-                                stroke-linecap="round" />
-                            <line x1="374.293" y1="273.731" x2="426.054" y2="268.753" stroke="white" stroke-width="4"
-                                stroke-linecap="round" />
-                            <line x1="375.921" y1="290.652" x2="427.682" y2="285.675" stroke="white" stroke-width="4"
-                                stroke-linecap="round" />
-                            <line x1="377.548" y1="307.574" x2="429.309" y2="302.597" stroke="white" stroke-width="4"
-                                stroke-linecap="round" />
-                            <line x1="85.2432" y1="401.988" x2="137.004" y2="397.011" stroke="white" stroke-width="4"
-                                stroke-linecap="round" />
-                            <line x1="86.8705" y1="418.91" x2="138.632" y2="413.933" stroke="white" stroke-width="4"
-                                stroke-linecap="round" />
-                            <line x1="88.4978" y1="435.832" x2="140.259" y2="430.855" stroke="white" stroke-width="4"
-                                stroke-linecap="round" />
-                            <line x1="284.325" y1="382.844" x2="336.086" y2="377.866" stroke="white" stroke-width="4"
-                                stroke-linecap="round" />
-                            <line x1="285.952" y1="399.765" x2="337.713" y2="394.788" stroke="white" stroke-width="4"
-                                stroke-linecap="round" />
-                            <line x1="287.579" y1="416.687" x2="339.341" y2="411.71" stroke="white" stroke-width="4"
-                                stroke-linecap="round" />
-
-                            <path
-                                d="M89.2904 232.071L76.0741 221.173L78.7985 217.869L88.7107 226.042L106.252 204.769L109.556 207.493L89.2904 232.071Z"
-                                fill="white" />
-                            <path
-                                d="M506.598 392.863L493.382 381.966L496.106 378.661L506.019 386.835L523.56 365.561L526.864 368.285L506.598 392.863Z"
-                                fill="white" />
-                            <path
-                                d="M198.404 322.039L185.187 311.142L187.912 307.838L197.824 316.011L215.365 294.737L218.669 297.462L198.404 322.039Z"
-                                fill="white" />
-                            <path
-                                d="M387.913 203.353L374.696 192.456L377.421 189.152L387.333 197.325L404.874 176.051L408.178 178.776L387.913 203.353Z"
-                                fill="white" />
-                        </svg> -->
+                        <img src="./img/events.svg" class="calendar-illustration" alt="Календарь мероприятий ПГУТИ"
+                            loading="lazy" width="600" height="491" />
                     </div>
 
-                    <!-- Список событий (реальные новости ПГУТИ) -->
                     <div class="events-list">
                         <div class="event-item">
                             <h3 class="event-title">
@@ -448,7 +372,7 @@
                                     Доцент ПГУТИ выступила на Первом Всероссийском фестивале «Встреча культур»
                                 </a>
                             </h3>
-                            <div class="event-date">08 июня 2026 г.</div>
+                            <time class="event-date" datetime="2026-06-08">08 июня 2026 г.</time>
                         </div>
 
                         <div class="event-item">
@@ -458,7 +382,7 @@
                                     Ректор ПГУТИ лично поздравил Николая Пантелеевича Фоменко со 100-летним юбилеем
                                 </a>
                             </h3>
-                            <div class="event-date">04 июня 2026 г.</div>
+                            <time class="event-date" datetime="2026-06-04">04 июня 2026 г.</time>
                         </div>
 
                         <div class="event-item">
@@ -468,7 +392,7 @@
                                     Студенты ПГУТИ — призёры чемпионата «Кубок пользователей 2026»
                                 </a>
                             </h3>
-                            <div class="event-date">02 июня 2026 г.</div>
+                            <time class="event-date" datetime="2026-06-02">02 июня 2026 г.</time>
                         </div>
 
                         <div class="event-item">
@@ -477,7 +401,7 @@
                                     «АйТигры» представили ПГУТИ на Первой лиге КВН!
                                 </a>
                             </h3>
-                            <div class="event-date">02 июня 2026 г.</div>
+                            <time class="event-date" datetime="2026-06-02">02 июня 2026 г.</time>
                         </div>
 
                         <div class="event-item">
@@ -487,7 +411,7 @@
                                     Студентка ПГУТИ — призёр VI Всероссийского конкурса научных переводов
                                 </a>
                             </h3>
-                            <div class="event-date">02 июня 2026 г.</div>
+                            <time class="event-date" datetime="2026-06-02">02 июня 2026 г.</time>
                         </div>
 
                         <div class="event-item">
@@ -496,15 +420,16 @@
                                     Официальное празднование 70-летия КЭИС-ПИИРС-ПГАТИ-ПГУТИ
                                 </a>
                             </h3>
-                            <div class="event-date">24 сентября 2026 г.</div>
+                            <time class="event-date" datetime="2026-09-24">24 сентября 2026 г.</time>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="faculties" id="faculties">
+
+        <section class="faculties" id="faculties" aria-labelledby="faculties-title">
             <div class="container">
-                <h2>Факультеты университета</h2>
+                <h2 id="faculties-title">Факультеты ПГУТИ</h2>
 
                 <div class="faculties-grid">
                     <a href="https://www.psuti.ru/ru/f1" class="faculty-card">
@@ -549,9 +474,10 @@
                 </div>
             </div>
         </section>
-        <section class="notifications" id="notifications">
+
+        <section class="notifications" id="notifications" aria-labelledby="notifications-title">
             <div class="container">
-                <h2 class="block-title">Уведомление</h2>
+                <h2 class="block-title" id="notifications-title">Уведомления ПГУТИ</h2>
 
                 <div class="notifications-wrapper">
                     <div class="notifications-list">
@@ -559,63 +485,72 @@
                             <a href="#" class="notification-title notification-title--active">
                                 Время работы библиотеки продлено на период экзаменов.
                             </a>
-                            <span class="notification-date">Суббота, 10 января 2026 г. - 09:43</span>
+                            <time class="notification-date" datetime="2026-01-10T09:43">Суббота, 10 января 2026 г. -
+                                09:43</time>
                         </div>
 
                         <div class="notification-item">
                             <a href="#" class="notification-title">
                                 Обязательная ознакомительная программа для студентов первого курса.
                             </a>
-                            <span class="notification-date">Суббота, 10 января 2026 г. - 09:43</span>
+                            <time class="notification-date" datetime="2026-01-10T09:43">Суббота, 10 января 2026 г. -
+                                09:43</time>
                         </div>
 
                         <div class="notification-item">
                             <a href="#" class="notification-title">
                                 Список распределения мест в общежитии для новых студентов
                             </a>
-                            <span class="notification-date">Суббота, 10 января 2026 г. - 09:43</span>
+                            <time class="notification-date" datetime="2026-01-10T09:43">Суббота, 10 января 2026 г. -
+                                09:43</time>
                         </div>
 
                         <div class="notification-item">
                             <a href="#" class="notification-title">
                                 Крайний срок подачи заявок на исследовательские гранты.
                             </a>
-                            <span class="notification-date">Суббота, 10 января 2026 г. - 09:43</span>
+                            <time class="notification-date" datetime="2026-01-10T09:43">Суббота, 10 января 2026 г. -
+                                09:43</time>
                         </div>
 
                         <div class="notification-item">
                             <a href="#" class="notification-title">
                                 Онлайн-регистрация на курсы весеннего семестра
                             </a>
-                            <span class="notification-date">Суббота, 10 января 2026 г. - 09:43</span>
+                            <time class="notification-date" datetime="2026-01-10T09:43">Суббота, 10 января 2026 г. -
+                                09:43</time>
                         </div>
 
                         <div class="notification-item">
                             <a href="#" class="notification-title">
                                 Университетский кампус закрыт в национальный праздник.
                             </a>
-                            <span class="notification-date">Суббота, 10 января 2026 г. - 09:43</span>
+                            <time class="notification-date" datetime="2026-01-10T09:43">Суббота, 10 января 2026 г. -
+                                09:43</time>
                         </div>
                     </div>
 
                     <div class="notifications-image">
-                        <img src="./img/notice.svg" alt="Уведомления университета">
+                        <img src="./img/notice.svg" alt="Иконка уведомлений университета ПГУТИ" loading="lazy"
+                            width="300" height="300">
                     </div>
                 </div>
             </div>
         </section>
-        <section class="blog-section">
+
+        <section class="blog-section" aria-labelledby="blog-title">
             <div class="container">
-                <h2 class="block-title">Новости ПГУТИ</h2>
+                <h2 class="block-title" id="blog-title">Новости ПГУТИ</h2>
 
                 <div class="blog-grid">
                     <article class="blog-card">
                         <div class="blog-card-image">
                             <img src="./img/news-7.jpg"
-                                alt="Первые выпускники магистратуры Инженерия искусственного интеллекта">
+                                alt="Первые выпускники магистратуры Инженерия искусственного интеллекта ПГУТИ"
+                                loading="lazy" width="400" height="300">
                         </div>
                         <div class="blog-card-content">
-                            <div class="news-date">15/06/26 - 14:21</div>
+                            <time class="news-date" datetime="2026-06-15T14:21">15/06/26 - 14:21</time>
                             <h3>
                                 <a
                                     href="https://www.psuti.ru/ru/news/pervye-vypuskniki-magistratury-inzheneriya-iskusstvennogo-intellekta-uspeshno-zashchitili">
@@ -628,10 +563,11 @@
 
                     <article class="blog-card">
                         <div class="blog-card-image">
-                            <img src="./img/news-8.jpg" alt="Делегация ПГУТИ посещает вуз-партнер в Китае">
+                            <img src="./img/news-8.jpg" alt="Делегация ПГУТИ посещает вуз-партнер в Китае"
+                                loading="lazy" width="400" height="300">
                         </div>
                         <div class="blog-card-content">
-                            <div class="news-date">10/06/26 - 15:48</div>
+                            <time class="news-date" datetime="2026-06-10T15:48">10/06/26 - 15:48</time>
                             <h3>
                                 <a href="https://www.psuti.ru/ru/news/delegaciya-pguti-poseshchaet-vuz-partner-v-kitae">
                                     Делегация ПГУТИ посещает вуз-партнер в Китае
@@ -642,10 +578,11 @@
 
                     <article class="blog-card">
                         <div class="blog-card-image">
-                            <img src="./img/news-9.jpg" alt="Победа ПГУТИ в полуфинале Кубка СФПЛ">
+                            <img src="./img/news-9.jpg" alt="Победа ПГУТИ в полуфинале Кубка СФПЛ" loading="lazy"
+                                width="400" height="300">
                         </div>
                         <div class="blog-card-content">
-                            <div class="news-date">09/06/26 - 16:09</div>
+                            <time class="news-date" datetime="2026-06-09T16:09">09/06/26 - 16:09</time>
                             <h3>
                                 <a href="https://www.psuti.ru/ru/news/pobeda-pguti-v-polufinale-kubka-sfpl">
                                     Победа ПГУТИ в полуфинале Кубка СФПЛ
@@ -656,13 +593,14 @@
                 </div>
 
                 <div class="blog-button-wrapper">
-                    <a href="blog.html" class="btn-blog">Все новости</a>
+                    <a href="blog.html" class="btn-blog">Все новости ПГУТИ</a>
                 </div>
             </div>
         </section>
-        <section class="scholarships-section">
+
+        <section class="scholarships-section" aria-labelledby="scholarships-title">
             <div class="container">
-                <h2 class="block-title">Поддержка на каждом этапе</h2>
+                <h2 class="block-title" id="scholarships-title">Поддержка студентов ПГУТИ на каждом этапе обучения</h2>
 
                 <div class="scholarships-intro">
                     <p>В университете ПГУТИ мы обеспечиваем <strong>поддержку на каждом этапе</strong> вашего обучения.
@@ -683,55 +621,63 @@
                         <li><strong>Электронное портфолио</strong> — фиксируйте свои достижения и прогресс</li>
                     </ul>
 
-                    <p>Откройте для себя возможности, которые сделают ваше образование качественным и доступным.</p>
+                    <p>Откройте для себя возможности, которые сделают ваше образование в ПГУТИ качественным и доступным.
+                    </p>
                 </div>
 
                 <div class="scholarships-grid">
                     <article class="scholarship-card">
-                        <div class="scholarship-card-image">
-                            <img src="./img/scholarship-1.jpg" alt="Образовательные программы">
-                        </div>
-                        <div class="scholarship-card-content">
-                            <h3>Образовательные программы</h3>
-                        </div>
+                        <a href="https://www.psuti.ru/ru/sveden/education" class="scholarship-card-link">
+                            <div class="scholarship-card-image">
+                                <img src="./img/photo_2023-03-30_13-09-41-2-1024x682.jpg"
+                                    alt="Образовательные программы ПГУТИ" loading="lazy" width="400" height="267">
+                            </div>
+                            <div class="scholarship-card-content">
+                                <h3>Образовательные программы</h3>
+                            </div>
+                        </a>
                     </article>
 
                     <article class="scholarship-card">
-                        <div class="scholarship-card-image">
-                            <img src="./img/scholarship-2.jpg" alt="Учебные планы и практики">
-                        </div>
-                        <div class="scholarship-card-content">
-                            <h3>Учебные планы и практики</h3>
-                        </div>
+                        <a href="https://www.psuti.ru/ru/sveden/education" class="scholarship-card-link">
+                            <div class="scholarship-card-image">
+                                <img src="./img/photo_2023-03-30_13-09-41-2-1024x682.jpg"
+                                    alt="Учебные планы и практики в ПГУТИ" loading="lazy" width="400" height="267">
+                            </div>
+                            <div class="scholarship-card-content">
+                                <h3>Учебные планы и практики</h3>
+                            </div>
+                        </a>
                     </article>
 
                     <article class="scholarship-card">
-                        <div class="scholarship-card-image">
-                            <img src="./img/scholarship-3.jpg" alt="Расписание">
-                        </div>
-                        <div class="scholarship-card-content">
-                            <h3>Расписание</h3>
-                        </div>
+                        <a href="https://max.ru/vuz_schedule_bot" class="scholarship-card-link">
+                            <div class="scholarship-card-image">
+                                <img src="./img/photo_2023-03-30_13-09-41-2-1024x682.jpg" alt="Расписание занятий ПГУТИ"
+                                    loading="lazy" width="400" height="267">
+                            </div>
+                            <div class="scholarship-card-content">
+                                <h3>Расписание</h3>
+                            </div>
+                        </a>
                     </article>
-
                 </div>
 
                 <div class="scholarships-button-wrapper">
-                    <a href="support.html" class="btn-scholarships">Просмотреть все виды поддержки</a>
+                    <a href="support.html" class="btn-scholarships">Просмотреть все виды поддержки студентов</a>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <!-- Верхняя секция -->
+
+    <footer class="footer" role="contentinfo">
         <div class="footer-top">
             <div class="footer-container footer-top-container">
-                <!-- О университете -->
                 <div class="footer-about">
                     <div class="footer-logo-wrapper">
-                        <a href="#" class="logo-link">
+                        <a href="https://www.psuti.ru/" class="logo-link" aria-label="ПГУТИ - Главная страница">
                             <img src="https://www.psuti.ru/sites/default/files/pguti70-mini-chb-belyy-sayt.png"
-                                alt="Логотип ПГУТИ" class="logo-img" />
+                                alt="Логотип ПГУТИ" class="logo-img" width="150" height="50" />
                         </a>
                     </div>
                     <p class="footer-about-text">
@@ -776,24 +722,22 @@
                     </div>
                 </div>
 
-                <!-- Ссылки -->
                 <div class="footer-links-col">
                     <a href="#" class="footer-link-item">Подать заявку на программу бакалавриата</a>
                     <a href="#" class="footer-link-item">Подать заявку на программу послевузовского образования</a>
                 </div>
 
-                <!-- Контакты -->
                 <div class="footer-contacts-col">
                     <div class="footer-contact-block">
                         <div class="footer-contact-label">Адрес:</div>
                         <div class="footer-contact-item">
                             <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                 stroke="#FFB81C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                width="20" height="20">
+                                width="20" height="20" aria-hidden="true">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                                 <circle cx="12" cy="10" r="3" />
                             </svg>
-                            <span>443010, г. Самара,<br>ул. Льва Толстого, 23</span>
+                            <address>443010, г. Самара,<br>ул. Льва Толстого, 23</address>
                         </div>
                     </div>
 
@@ -802,11 +746,11 @@
                         <div class="footer-contact-item">
                             <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                 stroke="#FFB81C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                width="20" height="20">
+                                width="20" height="20" aria-hidden="true">
                                 <path
                                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                             </svg>
-                            <span>+7 (846) 332-45-00</span>
+                            <a href="tel:+78463324500">+7 (846) 332-45-00</a>
                         </div>
                     </div>
 
@@ -815,131 +759,131 @@
                         <div class="footer-contact-item">
                             <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                 stroke="#FFB81C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                width="20" height="20">
+                                width="20" height="20" aria-hidden="true">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                                 <polyline points="22,6 12,13 2,6" />
                             </svg>
-                            <span>psuti@psuti.ru</span>
+                            <a href="mailto:psuti@psuti.ru">psuti@psuti.ru</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Средняя секция -->
         <div class="footer-middle">
             <div class="footer-container footer-middle-container">
                 <div class="footer-nav-col">
                     <h4 class="footer-nav-title">О ПГУТИ</h4>
-                    <a href="#" class="footer-nav-link">Структура</a>
-                    <a href="#" class="footer-nav-link">Руководство и преподаватели</a>
-                    <a href="#" class="footer-nav-link">Противодействие коррупции</a>
-                    <a href="#" class="footer-nav-link">Противодействие идеологии терроризма</a>
-                    <a href="#" class="footer-nav-link">Самообследование</a>
-                    <a href="#" class="footer-nav-link">Исполнение предписаний органов надзора</a>
-                    <a href="#" class="footer-nav-link">Прокуратура разъясняет</a>
+                    <a href="https://www.psuti.ru/ru/sveden/struct" class="footer-nav-link">Структура</a>
+                    <a href="https://www.psuti.ru/ru/sveden/employees" class="footer-nav-link">Руководство и
+                        преподаватели</a>
+                    <a href="https://www.psuti.ru/university/anticorruption/norm-akt"
+                        class="footer-nav-link">Противодействие коррупции</a>
+                    <a href="https://www.psuti.ru/ru/university/antiter" class="footer-nav-link">Противодействие
+                        идеологии терроризма</a>
+                    <a href="https://www.psuti.ru/reports/self-inspection" class="footer-nav-link">Самообследование</a>
+                    <a href="https://www.psuti.ru/ru/reports/state_control" class="footer-nav-link">Исполнение
+                        предписаний органов надзора</a>
+                    <a href="https://www.psuti.ru/ru/university/prosecutor-explains" class="footer-nav-link">Прокуратура
+                        разъясняет</a>
                 </div>
 
                 <div class="footer-nav-col">
                     <h4 class="footer-nav-title">ОБРАЗОВАНИЕ</h4>
-                    <a href="#" class="footer-nav-link">Прием на бакалавриат</a>
-                    <a href="#" class="footer-nav-link">Прием на магистратуру</a>
-                    <a href="#" class="footer-nav-link">Аспирантура и докторантура</a>
-                    <a href="#" class="footer-nav-link">Повышение квалификации, переподготовка</a>
-                    <a href="#" class="footer-nav-link">Дистанционное образование</a>
+                    <a href="https://abitur.psuti.ru/napravleniya-podgotovki/ochnaya-forma-obucheniya/?utm_source=psuti-ru&utm_medium=link&utm_campaign=footer"
+                        class="footer-nav-link">Прием на бакалавриат</a>
+                    <a href="https://abitur.psuti.ru/napravleniya-podgotovki/" class="footer-nav-link">Прием на
+                        магистратуру</a>
+                    <a href="https://www.psuti.ru/ru/education/graduate_school" class="footer-nav-link">Аспирантура и
+                        докторантура</a>
+                    <a href="https://srttc.ru/" class="footer-nav-link">Повышение квалификации, переподготовка</a>
+                    <a href="https://do.psuti.ru/" class="footer-nav-link">Дистанционное образование</a>
                 </div>
 
                 <div class="footer-nav-col">
                     <h4 class="footer-nav-title">НАУКА</h4>
-                    <a href="#" class="footer-nav-link">Конференции, конкурсы, гранты</a>
-                    <a href="#" class="footer-nav-link">Диссертационные советы</a>
-                    <a href="#" class="footer-nav-link">Защиты диссертаций</a>
-                    <a href="#" class="footer-nav-link">Журнал Физика волновых процессов</a>
-                    <a href="#" class="footer-nav-link">Журнал Инфокоммуникационные технологии</a>
+                    <a href="https://www.psuti.ru/ru/science/conference" class="footer-nav-link">Конференции, конкурсы,
+                        гранты</a>
+                    <a href="https://www.psuti.ru/ru/science/dissertation_councils"
+                        class="footer-nav-link">Диссертационные советы</a>
+                    <a href="https://www.psuti.ru/ru/science/dissertation_councils/announcements"
+                        class="footer-nav-link">Защиты диссертаций</a>
+                    <a href="https://journals.ssau.ru/pwp" class="footer-nav-link">Журнал Физика волновых процессов</a>
+                    <a href="https://ikt.psuti.ru/" class="footer-nav-link">Журнал Инфокоммуникационные технологии</a>
                 </div>
 
                 <div class="footer-nav-col">
                     <h4 class="footer-nav-title">СТУДЕНТАМ</h4>
-                    <a href="#" class="footer-nav-link">Расписание занятий и экзаменов</a>
-                    <a href="#" class="footer-nav-link">Сообщить о коррупции</a>
-                    <a href="#" class="footer-nav-link">Военно-учетный отдел</a>
-                    <a href="#" class="footer-nav-link">Газета "Академия связи"</a>
-                    <a href="#" class="footer-nav-link">Единое окно</a>
-                    <a href="#" class="footer-nav-link">Карта-пропуск</a>
-                    <a href="#" class="footer-nav-link">Электронная зачетка</a>
+                    <a href="https://www.psuti.ru/ru/students/timetable" class="footer-nav-link">Расписание занятий и
+                        экзаменов</a>
+                    <a href="https://www.psuti.ru/ru/university/anticorruption/message" class="footer-nav-link">Сообщить
+                        о коррупции</a>
+                    <a href="https://www.psuti.ru/ru/students/veniously_sector" class="footer-nav-link">Военно-учетный
+                        отдел</a>
+                    <a href="https://www.psuti.ru/ru/others/newspaper" class="footer-nav-link">Газета "Академия
+                        связи"</a>
+                    <a href="https://www.psuti.ru/ru/edinoe-okno" class="footer-nav-link">Единое окно</a>
+                    <a href="https://www.psuti.ru/ru/ad/karta-propusk-dlya-studentov-pguti"
+                        class="footer-nav-link">Карта-пропуск</a>
+                    <a href="https://www.psuti.ru/ru/info/elektronnaya-zachetka-pguti-dlya-studentov-1-kursa"
+                        class="footer-nav-link">Электронная зачетка</a>
                 </div>
 
                 <div class="footer-nav-col">
                     <h4 class="footer-nav-title">МЕДИА</h4>
-                    <a href="#" class="footer-nav-link">Видео</a>
-                    <a href="#" class="footer-nav-link">Наша символика</a>
+                    <a href="http://www.youtube.com/user/psutichannel" class="footer-nav-link">Видео</a>
+                    <a href="https://www.psuti.ru/ru/logo" class="footer-nav-link">Наша символика</a>
                 </div>
 
                 <div class="footer-nav-col">
                     <h4 class="footer-nav-title">РЕСУРСЫ</h4>
-                    <a href="#" class="footer-nav-link">Заявления и документы</a>
-                    <a href="#" class="footer-nav-link">Навигатор по ВУЗу</a>
-                    <a href="#" class="footer-nav-link">Ресурсы ИТ</a>
-                    <a href="#" class="footer-nav-link">Работоспособность</a>
-                    <a href="#" class="footer-nav-link">Порядок обработки ПДн</a>
-                    <a href="#" class="footer-nav-link">Часто задаваемые вопросы</a>
-                    <a href="#" class="footer-nav-link">Реквизиты</a>
-                    <a href="#" class="footer-nav-link">Горячая линия</a>
+                    <a href="https://www.psuti.ru/ru/students/doc" class="footer-nav-link">Заявления и документы</a>
+                    <a href="http://phone.psuti.ru/" class="footer-nav-link">Навигатор по ВУЗу</a>
+                    <a href="https://www.psuti.ru/ru/university/informatization/instructions"
+                        class="footer-nav-link">Ресурсы ИТ</a>
+                    <a href="https://www.psuti.ru/ru/university/psuti-it-health"
+                        class="footer-nav-link">Работоспособность</a>
+                    <a href="https://www.psuti.ru/sites/default/files/field/document/2026/03/prikaz_no99-3_ot_28.07.2023.pdf"
+                        class="footer-nav-link">Порядок обработки ПДн</a>
+                    <a href="https://www.psuti.ru/ru/question" class="footer-nav-link">Часто задаваемые вопросы</a>
+                    <a href="https://www.psuti.ru/sites/default/files/field/attachments/2026/03/rekvizity_pguti_s_27.11.2025.doc"
+                        class="footer-nav-link">Реквизиты</a>
+                    <a href="https://www.psuti.ru/ru/hotlines" class="footer-nav-link">Горячая линия</a>
                 </div>
             </div>
         </div>
 
-        <!-- Нижняя секция -->
         <div class="footer-bottom">
             <div class="footer-container footer-bottom-container">
                 <p class="footer-copyright">© 2026 ПГУТИ, Все права защищены.</p>
                 <div class="footer-socials">
-                    <a href="#" class="footer-social-link" aria-label="Facebook">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18"
-                            height="18">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                        </svg>
-                    </a>
-                    <a href="#" class="footer-social-link" aria-label="X (Twitter)">
+                    <a href="https://vk.com/psuti" class="footer-social-link" aria-label="ПГУТИ ВКонтакте"
+                        target="_blank" rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18"
                             height="18">
                             <path
-                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                d="M12.725 16.017s.268-.03.483-.171c.198-.13.192-.375.192-.375s-.018-1.151.518-1.321c.528-.168 1.208 1.113 1.933 1.605.546.368.96.288.96.288l1.933-.027s1.01-.063.531-.857c-.04-.066-.283-.594-1.454-1.678-1.225-1.134-1.06-.95.414-2.912.898-1.193 1.254-1.924 1.144-2.236-.105-.298-.768-.22-.768-.22l-2.19.014s-.162-.022-.282.05c-.118.07-.194.235-.194.235s-.35.933-.82 1.732c-.991 1.683-1.387 1.774-1.548 1.674-.376-.243-.282-.974-.282-1.493 0-1.619.245-2.295-.478-2.468-.24-.058-.417-.096-1.034-.103-.792-.008-1.462.002-1.84.188-.253.125-.447.405-.329.42.147.02.48.09.651.331.221.31.214 1.003.214 1.003s.128 1.937-.299 2.173c-.293.161-.695-.169-1.562-1.701-.444-.784-.78-1.648-.78-1.648s-.065-.16-.18-.245c-.14-.104-.335-.137-.335-.137l-2.089.014s-.314.009-.43.145c-.105.123-.009.375-.009.375s1.635 3.818 3.489 5.74c1.699 1.767 3.635 1.653 3.635 1.653h.875z" />
                         </svg>
                     </a>
-                    <a href="#" class="footer-social-link" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                        </svg>
-                    </a>
-                    <a href="#" class="footer-social-link" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18"
-                            height="18">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                            <rect x="2" y="9" width="4" height="12" />
-                            <circle cx="4" cy="4" r="2" />
-                        </svg>
-                    </a>
-                    <a href="#" class="footer-social-link" aria-label="YouTube">
+                    <a href="https://t.me/psuti" class="footer-social-link" aria-label="ПГУТИ Telegram" target="_blank"
+                        rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18"
                             height="18">
                             <path
-                                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z" />
-                            <polygon points="9.75,15.02 15.5,11.75 9.75,8.48" fill="#0c426f" />
+                                d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
                         </svg>
                     </a>
-                    <a href="#" class="footer-social-link" aria-label="GitHub">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18"
-                            height="18">
-                            <path
-                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    <a href="https://max.ru/vuz_schedule_bot" class="footer-social-link" aria-label="ПГУТИ MAX"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg width="18" height="18" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16.5" cy="16.5" r="16.5" fill="#083057" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.6994 25.7283C14.8778 25.7283 14.0312 25.4612 12.5597 24.3928C11.6289 25.5947 8.68141 26.534 8.55287 24.927C8.55287 23.7206 8.28693 22.7012 7.98554 21.5883C7.62652 20.2173 7.21875 18.6904 7.21875 16.478C7.21875 11.194 11.5358 7.21875 16.6507 7.21875C21.77 7.21875 25.7812 11.3898 25.7812 16.5269C25.7894 18.956 24.8378 21.289 23.1352 23.0141C21.4325 24.7392 19.1179 25.7153 16.6994 25.7283ZM16.7748 11.786C14.2838 11.6569 12.3425 13.3886 11.9125 16.104C11.558 18.3521 12.1874 21.0898 12.7237 21.2322C12.9807 21.2945 13.6278 20.7693 14.0312 20.3642C14.6981 20.8269 15.4748 21.1048 16.2828 21.1699C17.5235 21.2298 18.7381 20.7985 19.6656 19.9686C20.593 19.1387 21.1592 17.9764 21.2425 16.7317C21.291 15.4844 20.8501 14.2678 20.0145 13.3437C19.179 12.4196 18.0156 11.8619 16.7748 11.7905V11.786Z"
+                                fill="white" />
                         </svg>
                     </a>
                 </div>
-                <button class="footer-scroll-top" aria-label="Наверх">
+                <button class="footer-scroll-top" aria-label="Вернуться наверх">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
                         <line x1="12" y1="19" x2="12" y2="5" />
