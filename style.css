@@ -1809,6 +1809,7 @@ button {
     margin-top: 20px;
 }
 
+/* === Светлая тема (базовая) === */
 .footer-expand-inner {
     padding: 20px 24px;
     background: var(--color-dropdown-bg);
@@ -1876,6 +1877,41 @@ button {
 .footer-expand-inner:hover {
     background: color-mix(in srgb, var(--color-dropdown-bg) 92%, var(--color-accent) 8%);
     transition: background var(--transition-speed) ease;
+}
+
+/* === Тёмная тема === */
+html[data-theme="dark"] .footer-expand-inner {
+    background: var(--color-dropdown-bg);
+    border-left-color: var(--color-accent);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Заголовок — акцентный цвет для контраста */
+html[data-theme="dark"] .expand-title {
+    color: var(--color-accent);
+}
+
+html[data-theme="dark"] .expand-title::after {
+    background: var(--color-accent);
+}
+
+/* Абзацы — светлый цвет текста */
+html[data-theme="dark"] .footer-expand-inner p {
+    color: var(--color-text-light);
+}
+
+/* Список — светлый цвет текста */
+html[data-theme="dark"] .expand-list li {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .expand-list li::before {
+    background: var(--color-accent);
+}
+
+/* Hover-эффект в тёмной теме */
+html[data-theme="dark"] .footer-expand-inner:hover {
+    background: color-mix(in srgb, var(--color-dropdown-bg) 85%, var(--color-accent) 15%);
 }
 
 /* Footer Links */
@@ -3350,4 +3386,239 @@ button {
     outline: 2px solid #0066cc;
     outline-offset: 2px;
     border-radius: inherit;
+}
+/* === Контейнер действий в top-bar === */
+.top-bar-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* === Базовые стили кнопок === */
+.theme-toggle,
+.accessibility-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    color: var(--color-primary);
+    transition: all var(--transition-speed) ease;
+    font-family: var(--font-family);
+    font-size: 14px;
+}
+
+.theme-toggle:hover,
+.accessibility-toggle:hover {
+    background: var(--color-hover);
+    border-color: var(--color-primary);
+}
+
+.theme-toggle:focus-visible,
+.accessibility-toggle:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.accessibility-label {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* === Тёмная тема === */
+html[data-theme="dark"] {
+    --color-primary: #4BA3E3;
+    --color-primary-hover: #3a8bc7;
+    --color-primary-dark: #2a6f9e;
+    --color-secondary: #0c426f;
+    --color-accent: #FFB81C;
+    --color-text: #e6e6e6;
+    --color-text-light: #b0b0b0;
+    --color-white: #1a1f26;
+    --color-beige: #2a313a;
+    --color-gray-050: #0f1419;
+    --color-dropdown-bg: #1a1f26;
+    --color-border: rgba(255, 255, 255, 0.2);
+    --color-hover: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] body {
+    background-color: var(--color-gray-050);
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .header,
+html[data-theme="dark"] .footer,
+html[data-theme="dark"] .top-bar {
+    background-color: var(--color-white);
+    border-color: var(--color-border);
+}
+
+html[data-theme="dark"] .theme-toggle,
+html[data-theme="dark"] .accessibility-toggle {
+    color: var(--color-text);
+    border-color: var(--color-border);
+}
+
+html[data-theme="dark"] .theme-toggle:hover,
+html[data-theme="dark"] .accessibility-toggle:hover {
+    background: var(--color-hover);
+    border-color: var(--color-accent);
+}
+/* Для тёмной темы */
+html[data-theme="dark"] .footer-about-text {
+    color: var(--color-text-light);
+}
+
+/* Или для ещё лучшего контраста */
+html[data-theme="dark"] .footer-about-text {
+    color: var(--color-text);
+}
+/* ==========================================================================
+   ТЁМНАЯ ТЕМА: TOP-BAR & HEADER
+   ========================================================================== */
+
+html[data-theme="dark"] .top-bar {
+    background: var(--color-gray-050);
+    color: var(--color-text);
+    border-top-color: var(--color-primary);
+}
+
+html[data-theme="dark"] .top-bar-link {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .top-bar-link:hover {
+    opacity: 1;
+    color: var(--color-accent);
+}
+
+html[data-theme="dark"] .language-btn {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .language-btn:hover {
+    opacity: 1;
+    color: var(--color-accent);
+}
+
+/* Кнопки темы и доступности в тёмной теме */
+html[data-theme="dark"] .theme-toggle,
+html[data-theme="dark"] .accessibility-toggle {
+    color: var(--color-text);
+    border-color: var(--color-border);
+}
+
+html[data-theme="dark"] .theme-toggle:hover,
+html[data-theme="dark"] .accessibility-toggle:hover {
+    background: var(--color-hover);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+/* Header в тёмной теме */
+html[data-theme="dark"] .header {
+    background: var(--color-dropdown-bg);
+    border-bottom-color: var(--color-border);
+}
+
+/* Навигация в тёмной теме */
+html[data-theme="dark"] .nav-link {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .nav-link::after {
+    background: var(--color-accent);
+}
+
+html[data-theme="dark"] .nav-link:hover,
+html[data-theme="dark"] .nav-item.active > .nav-link {
+    color: var(--color-accent);
+}
+
+html[data-theme="dark"] .dropdown-icon,
+html[data-theme="dark"] .submenu-icon {
+    color: var(--color-text-light);
+}
+
+html[data-theme="dark"] .nav-item:hover > .nav-link .dropdown-icon,
+html[data-theme="dark"] .has-dropdown.open > .nav-link .dropdown-icon,
+html[data-theme="dark"] .dropdown-menu li:hover > .dropdown-link .submenu-icon {
+    color: var(--color-accent);
+}
+
+/* Dropdown меню в тёмной теме */
+html[data-theme="dark"] .dropdown-menu {
+    background: var(--color-dropdown-bg);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+    border-top-color: var(--color-accent);
+}
+
+html[data-theme="dark"] .dropdown-link {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .dropdown-link:hover {
+    background: var(--color-hover);
+    border-left-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+html[data-theme="dark"] .dropdown-menu > li:not(:last-child) > .dropdown-link {
+    border-bottom-color: var(--color-border);
+}
+
+/* Submenu в тёмной теме */
+html[data-theme="dark"] .submenu {
+    background: var(--color-dropdown-bg);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+    border-left-color: var(--color-accent);
+}
+
+html[data-theme="dark"] .submenu .dropdown-link {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .submenu .dropdown-link:hover {
+    background: var(--color-hover);
+    border-left-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+/* Mega Menu в тёмной теме */
+html[data-theme="dark"] .mega-menu-column:not(:last-child) {
+    border-bottom-color: var(--color-border);
+}
+
+html[data-theme="dark"] .mega-menu-column > .dropdown-link {
+    color: var(--color-accent);
+}
+
+html[data-theme="dark"] .mega-menu-column > .dropdown-link:hover {
+    color: var(--color-text);
+    background: var(--color-hover);
+}
+
+/* Кнопки поиска и мобильного меню в тёмной теме */
+html[data-theme="dark"] .search-toggle,
+html[data-theme="dark"] .mobile-toggle {
+    background: transparent;
+    border-color: var(--color-border);
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .search-toggle:hover,
+html[data-theme="dark"] .mobile-toggle:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-primary-dark);
+}
+
+/* Логотип в тёмной теме — оставляем как есть (белый на тёмном фоне виден) */
+html[data-theme="dark"] .logo-img {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }

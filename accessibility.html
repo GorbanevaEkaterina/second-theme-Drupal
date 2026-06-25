@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru" class="accessibility-mode">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Версия для слабовидящих | ПГУТИ</title>
+    <meta name="description" content="Версия сайта ПГУТИ для слабовидящих" />
+    <link rel="stylesheet" href="accessibility.css" />
+</head>
+
+<body>
+    <div class="accessibility-panel">
+        <div class="container">
+            <div class="accessibility-controls">
+                <div class="control-group">
+                    <span class="control-label">Размер шрифта:</span>
+                    <button class="font-size-btn" data-size="small" aria-label="Маленький шрифт">А</button>
+                    <button class="font-size-btn active" data-size="medium" aria-label="Средний шрифт">А</button>
+                    <button class="font-size-btn" data-size="large" aria-label="Большой шрифт">А</button>
+                </div>
+
+                <div class="control-group">
+                    <span class="control-label">Цветовая схема:</span>
+                    <button class="theme-btn active" data-theme="default" aria-label="Обычная">Обычная</button>
+                    <button class="theme-btn" data-theme="inverted" aria-label="Инверсия">Инверсия</button>
+                    <button class="theme-btn" data-theme="brown" aria-label="Коричневая">Коричневая</button>
+                </div>
+
+                <div class="control-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="imagesToggle" checked />
+                        <span>Показывать изображения</span>
+                    </label>
+                </div>
+
+                <a href="index.html" class="back-link">← Вернуться к обычной версии</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo-link">
+                    <img src="https://www.psuti.ru/sites/default/files/field/attachments/2024/04/logo_pguti_blue.svg"
+                        alt="Логотип ПГУТИ" class="logo-img" />
+                </a>
+                <div class="site-title">Поволжский государственный университет телекоммуникаций и информатики</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <nav class="simple-nav" aria-label="Навигация">
+                <ul>
+                    <li><a href="#about">О университете</a></li>
+                    <li><a href="#admissions">Абитуриентам</a></li>
+                    <li><a href="#education">Образование</a></li>
+                    <li><a href="#science">Наука</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <section class="content-section">
+                <h1>ПГУТИ - Поволжский государственный университет телекоммуникаций и информатики</h1>
+
+                <p>Поволжский государственный университет телекоммуникаций и информатики — один из ведущих технических
+                    вузов России. Основанный в 1956 году, ПГУТИ создал прочную традицию академического превосходства,
+                    инноваций и динамичной университетской среды.</p>
+
+                <h2>Основные разделы</h2>
+                <ul>
+                    <li><a href="#">Образовательные программы</a></li>
+                    <li><a href="#">Приёмная комиссия</a></li>
+                    <li><a href="#">Расписание занятий</a></li>
+                    <li><a href="#">Научная деятельность</a></li>
+                </ul>
+
+                <h2>Контактная информация</h2>
+                <address>
+                    <p><strong>Адрес:</strong> 443010, г. Самара, ул. Льва Толстого, 23</p>
+                    <p><strong>Телефон приёмной комиссии:</strong> <a href="tel:+78463324500">+7 (846) 332-45-00</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:psuti@psuti.ru">psuti@psuti.ru</a></p>
+                </address>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 ПГУТИ, Все права защищены.</p>
+            <p><a href="index.html">Полная версия сайта</a></p>
+        </div>
+    </footer>
+
+    <script src="accessibility.js"></script>
+</body>
+
+</html>

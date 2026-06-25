@@ -21,28 +21,67 @@
         <div class="container">
             <div class="top-bar-content">
                 <div class="top-bar-links">
-                    <a href="#" class="top-bar-link">Student Login</a>
-                    <a href="#" class="top-bar-link">Alumni</a>
-                    <a href="#" class="top-bar-link">Log in</a>
+                    <a href="#" class="top-bar-link">Вход для студентов</a>
+                    <a href="#" class="top-bar-link">Выпускникам</a>
+                    <a href="#" class="top-bar-link">Войти</a>
                 </div>
-                <div class="language-selector">
-                    <button class="language-btn">
-                        <span>English</span>
-                        <i class="fas fa-chevron-up"></i>
+
+                <div class="top-bar-actions">
+                    <!-- Кнопка переключения темы -->
+                    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему" title="Сменить тему">
+                        <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            width="18" height="18" aria-hidden="true">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            width="18" height="18" aria-hidden="true" style="display:none;">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
                     </button>
+                    <!-- Кнопка версии для слабовидящих -->
+                    <button class="accessibility-toggle" id="accessibilityToggle"
+                        aria-label="Версия для слабовидящих (Ctrl+Shift+A)"
+                        title="Версия для слабовидящих (Ctrl+Shift+A)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"
+                            aria-hidden="true">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <span class="accessibility-label">А</span>
+                    </button>
+
+                    <!-- Переключатель языка -->
+                    <div class="language-selector">
+                        <button class="language-btn" aria-label="Выбор языка">
+                            <span>Русский</span>
+                            <i class="fas fa-chevron-up"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <header class="header">
+    <header class="header" role="banner">
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo-link">
+                <a href="https://www.psuti.ru/" class="logo-link" aria-label="ПГУТИ - Главная страница">
                     <img src="https://www.psuti.ru/sites/default/files/pguti70-mini-chb-belyy-sayt.png"
-                        alt="Логотип ПГУТИ" class="logo-img" />
+                        alt="Логотип ПГУТИ - Поволжский государственный университет телекоммуникаций и информатики"
+                        class="logo-img" width="150" height="50" />
                 </a>
-                <nav class="main-nav">
+                <nav class="main-nav" role="navigation" aria-label="Главное меню">
                     <ul class="nav-menu">
                         <li class="nav-item has-dropdown">
                             <a href="#about" class="nav-link">
@@ -135,14 +174,14 @@
                         </li>
                     </ul>
 
-                    <button class="search-toggle" aria-label="Поиск">
+                    <button class="search-toggle" aria-label="Поиск по сайту">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="11" cy="11" r="8"></circle>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                         </svg>
                     </button>
 
-                    <button class="mobile-toggle" aria-label="Меню">
+                    <button class="mobile-toggle" aria-label="Открыть меню">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="3" y1="6" x2="21" y2="6"></line>
                             <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -932,16 +971,14 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <!-- Верхняя секция -->
+    <footer class="footer" role="contentinfo">
         <div class="footer-top">
             <div class="footer-container footer-top-container">
-                <!-- О университете -->
                 <div class="footer-about">
                     <div class="footer-logo-wrapper">
-                        <a href="index.html" class="logo-link">
+                        <a href="https://www.psuti.ru/" class="logo-link" aria-label="ПГУТИ - Главная страница">
                             <img src="https://www.psuti.ru/sites/default/files/pguti70-mini-chb-belyy-sayt.png"
-                                alt="Логотип ПГУТИ" class="logo-img" />
+                                alt="Логотип ПГУТИ" class="logo-img" width="150" height="50" />
                         </a>
                     </div>
                     <p class="footer-about-text">
@@ -986,24 +1023,22 @@
                     </div>
                 </div>
 
-                <!-- Ссылки -->
                 <div class="footer-links-col">
                     <a href="#" class="footer-link-item">Подать заявку на программу бакалавриата</a>
                     <a href="#" class="footer-link-item">Подать заявку на программу послевузовского образования</a>
                 </div>
 
-                <!-- Контакты -->
                 <div class="footer-contacts-col">
                     <div class="footer-contact-block">
                         <div class="footer-contact-label">Адрес:</div>
                         <div class="footer-contact-item">
                             <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                 stroke="#FFB81C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                width="20" height="20">
+                                width="20" height="20" aria-hidden="true">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                                 <circle cx="12" cy="10" r="3" />
                             </svg>
-                            <span>443010, г. Самара,<br>ул. Льва Толстого, 23</span>
+                            <address>443010, г. Самара,<br>ул. Льва Толстого, 23</address>
                         </div>
                     </div>
 
@@ -1012,11 +1047,11 @@
                         <div class="footer-contact-item">
                             <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                 stroke="#FFB81C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                width="20" height="20">
+                                width="20" height="20" aria-hidden="true">
                                 <path
                                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                             </svg>
-                            <span>+7 (846) 332-45-00</span>
+                            <a href="tel:+78463324500">+7 (846) 332-45-00</a>
                         </div>
                     </div>
 
@@ -1025,131 +1060,131 @@
                         <div class="footer-contact-item">
                             <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                 stroke="#FFB81C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                width="20" height="20">
+                                width="20" height="20" aria-hidden="true">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                                 <polyline points="22,6 12,13 2,6" />
                             </svg>
-                            <span>psuti@psuti.ru</span>
+                            <a href="mailto:psuti@psuti.ru">psuti@psuti.ru</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Средняя секция -->
         <div class="footer-middle">
             <div class="footer-container footer-middle-container">
                 <div class="footer-nav-col">
                     <h4 class="footer-nav-title">О ПГУТИ</h4>
-                    <a href="#" class="footer-nav-link">Структура</a>
-                    <a href="#" class="footer-nav-link">Руководство и преподаватели</a>
-                    <a href="#" class="footer-nav-link">Противодействие коррупции</a>
-                    <a href="#" class="footer-nav-link">Противодействие идеологии терроризма</a>
-                    <a href="#" class="footer-nav-link">Самообследование</a>
-                    <a href="#" class="footer-nav-link">Исполнение предписаний органов надзора</a>
-                    <a href="#" class="footer-nav-link">Прокуратура разъясняет</a>
+                    <a href="https://www.psuti.ru/ru/sveden/struct" class="footer-nav-link">Структура</a>
+                    <a href="https://www.psuti.ru/ru/sveden/employees" class="footer-nav-link">Руководство и
+                        преподаватели</a>
+                    <a href="https://www.psuti.ru/university/anticorruption/norm-akt"
+                        class="footer-nav-link">Противодействие коррупции</a>
+                    <a href="https://www.psuti.ru/ru/university/antiter" class="footer-nav-link">Противодействие
+                        идеологии терроризма</a>
+                    <a href="https://www.psuti.ru/reports/self-inspection" class="footer-nav-link">Самообследование</a>
+                    <a href="https://www.psuti.ru/ru/reports/state_control" class="footer-nav-link">Исполнение
+                        предписаний органов надзора</a>
+                    <a href="https://www.psuti.ru/ru/university/prosecutor-explains" class="footer-nav-link">Прокуратура
+                        разъясняет</a>
                 </div>
 
                 <div class="footer-nav-col">
                     <h4 class="footer-nav-title">ОБРАЗОВАНИЕ</h4>
-                    <a href="#" class="footer-nav-link">Прием на бакалавриат</a>
-                    <a href="#" class="footer-nav-link">Прием на магистратуру</a>
-                    <a href="#" class="footer-nav-link">Аспирантура и докторантура</a>
-                    <a href="#" class="footer-nav-link">Повышение квалификации, переподготовка</a>
-                    <a href="#" class="footer-nav-link">Дистанционное образование</a>
+                    <a href="https://abitur.psuti.ru/napravleniya-podgotovki/ochnaya-forma-obucheniya/?utm_source=psuti-ru&utm_medium=link&utm_campaign=footer"
+                        class="footer-nav-link">Прием на бакалавриат</a>
+                    <a href="https://abitur.psuti.ru/napravleniya-podgotovki/" class="footer-nav-link">Прием на
+                        магистратуру</a>
+                    <a href="https://www.psuti.ru/ru/education/graduate_school" class="footer-nav-link">Аспирантура и
+                        докторантура</a>
+                    <a href="https://srttc.ru/" class="footer-nav-link">Повышение квалификации, переподготовка</a>
+                    <a href="https://do.psuti.ru/" class="footer-nav-link">Дистанционное образование</a>
                 </div>
 
                 <div class="footer-nav-col">
                     <h4 class="footer-nav-title">НАУКА</h4>
-                    <a href="#" class="footer-nav-link">Конференции, конкурсы, гранты</a>
-                    <a href="#" class="footer-nav-link">Диссертационные советы</a>
-                    <a href="#" class="footer-nav-link">Защиты диссертаций</a>
-                    <a href="#" class="footer-nav-link">Журнал Физика волновых процессов</a>
-                    <a href="#" class="footer-nav-link">Журнал Инфокоммуникационные технологии</a>
+                    <a href="https://www.psuti.ru/ru/science/conference" class="footer-nav-link">Конференции, конкурсы,
+                        гранты</a>
+                    <a href="https://www.psuti.ru/ru/science/dissertation_councils"
+                        class="footer-nav-link">Диссертационные советы</a>
+                    <a href="https://www.psuti.ru/ru/science/dissertation_councils/announcements"
+                        class="footer-nav-link">Защиты диссертаций</a>
+                    <a href="https://journals.ssau.ru/pwp" class="footer-nav-link">Журнал Физика волновых процессов</a>
+                    <a href="https://ikt.psuti.ru/" class="footer-nav-link">Журнал Инфокоммуникационные технологии</a>
                 </div>
 
                 <div class="footer-nav-col">
                     <h4 class="footer-nav-title">СТУДЕНТАМ</h4>
-                    <a href="#" class="footer-nav-link">Расписание занятий и экзаменов</a>
-                    <a href="#" class="footer-nav-link">Сообщить о коррупции</a>
-                    <a href="#" class="footer-nav-link">Военно-учетный отдел</a>
-                    <a href="#" class="footer-nav-link">Газета "Академия связи"</a>
-                    <a href="#" class="footer-nav-link">Единое окно</a>
-                    <a href="#" class="footer-nav-link">Карта-пропуск</a>
-                    <a href="#" class="footer-nav-link">Электронная зачетка</a>
+                    <a href="https://www.psuti.ru/ru/students/timetable" class="footer-nav-link">Расписание занятий и
+                        экзаменов</a>
+                    <a href="https://www.psuti.ru/ru/university/anticorruption/message" class="footer-nav-link">Сообщить
+                        о коррупции</a>
+                    <a href="https://www.psuti.ru/ru/students/veniously_sector" class="footer-nav-link">Военно-учетный
+                        отдел</a>
+                    <a href="https://www.psuti.ru/ru/others/newspaper" class="footer-nav-link">Газета "Академия
+                        связи"</a>
+                    <a href="https://www.psuti.ru/ru/edinoe-okno" class="footer-nav-link">Единое окно</a>
+                    <a href="https://www.psuti.ru/ru/ad/karta-propusk-dlya-studentov-pguti"
+                        class="footer-nav-link">Карта-пропуск</a>
+                    <a href="https://www.psuti.ru/ru/info/elektronnaya-zachetka-pguti-dlya-studentov-1-kursa"
+                        class="footer-nav-link">Электронная зачетка</a>
                 </div>
 
                 <div class="footer-nav-col">
                     <h4 class="footer-nav-title">МЕДИА</h4>
-                    <a href="#" class="footer-nav-link">Видео</a>
-                    <a href="#" class="footer-nav-link">Наша символика</a>
+                    <a href="http://www.youtube.com/user/psutichannel" class="footer-nav-link">Видео</a>
+                    <a href="https://www.psuti.ru/ru/logo" class="footer-nav-link">Наша символика</a>
                 </div>
 
                 <div class="footer-nav-col">
                     <h4 class="footer-nav-title">РЕСУРСЫ</h4>
-                    <a href="#" class="footer-nav-link">Заявления и документы</a>
-                    <a href="#" class="footer-nav-link">Навигатор по ВУЗу</a>
-                    <a href="#" class="footer-nav-link">Ресурсы ИТ</a>
-                    <a href="#" class="footer-nav-link">Работоспособность</a>
-                    <a href="#" class="footer-nav-link">Порядок обработки ПДн</a>
-                    <a href="#" class="footer-nav-link">Часто задаваемые вопросы</a>
-                    <a href="#" class="footer-nav-link">Реквизиты</a>
-                    <a href="#" class="footer-nav-link">Горячая линия</a>
+                    <a href="https://www.psuti.ru/ru/students/doc" class="footer-nav-link">Заявления и документы</a>
+                    <a href="http://phone.psuti.ru/" class="footer-nav-link">Навигатор по ВУЗу</a>
+                    <a href="https://www.psuti.ru/ru/university/informatization/instructions"
+                        class="footer-nav-link">Ресурсы ИТ</a>
+                    <a href="https://www.psuti.ru/ru/university/psuti-it-health"
+                        class="footer-nav-link">Работоспособность</a>
+                    <a href="https://www.psuti.ru/sites/default/files/field/document/2026/03/prikaz_no99-3_ot_28.07.2023.pdf"
+                        class="footer-nav-link">Порядок обработки ПДн</a>
+                    <a href="https://www.psuti.ru/ru/question" class="footer-nav-link">Часто задаваемые вопросы</a>
+                    <a href="https://www.psuti.ru/sites/default/files/field/attachments/2026/03/rekvizity_pguti_s_27.11.2025.doc"
+                        class="footer-nav-link">Реквизиты</a>
+                    <a href="https://www.psuti.ru/ru/hotlines" class="footer-nav-link">Горячая линия</a>
                 </div>
             </div>
         </div>
 
-        <!-- Нижняя секция -->
         <div class="footer-bottom">
             <div class="footer-container footer-bottom-container">
                 <p class="footer-copyright">© 2026 ПГУТИ, Все права защищены.</p>
                 <div class="footer-socials">
-                    <a href="#" class="footer-social-link" aria-label="Facebook">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18"
-                            height="18">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                        </svg>
-                    </a>
-                    <a href="#" class="footer-social-link" aria-label="X (Twitter)">
+                    <a href="https://vk.com/psuti" class="footer-social-link" aria-label="ПГУТИ ВКонтакте"
+                        target="_blank" rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18"
                             height="18">
                             <path
-                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                d="M12.725 16.017s.268-.03.483-.171c.198-.13.192-.375.192-.375s-.018-1.151.518-1.321c.528-.168 1.208 1.113 1.933 1.605.546.368.96.288.96.288l1.933-.027s1.01-.063.531-.857c-.04-.066-.283-.594-1.454-1.678-1.225-1.134-1.06-.95.414-2.912.898-1.193 1.254-1.924 1.144-2.236-.105-.298-.768-.22-.768-.22l-2.19.014s-.162-.022-.282.05c-.118.07-.194.235-.194.235s-.35.933-.82 1.732c-.991 1.683-1.387 1.774-1.548 1.674-.376-.243-.282-.974-.282-1.493 0-1.619.245-2.295-.478-2.468-.24-.058-.417-.096-1.034-.103-.792-.008-1.462.002-1.84.188-.253.125-.447.405-.329.42.147.02.48.09.651.331.221.31.214 1.003.214 1.003s.128 1.937-.299 2.173c-.293.161-.695-.169-1.562-1.701-.444-.784-.78-1.648-.78-1.648s-.065-.16-.18-.245c-.14-.104-.335-.137-.335-.137l-2.089.014s-.314.009-.43.145c-.105.123-.009.375-.009.375s1.635 3.818 3.489 5.74c1.699 1.767 3.635 1.653 3.635 1.653h.875z" />
                         </svg>
                     </a>
-                    <a href="#" class="footer-social-link" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                        </svg>
-                    </a>
-                    <a href="#" class="footer-social-link" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18"
-                            height="18">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                            <rect x="2" y="9" width="4" height="12" />
-                            <circle cx="4" cy="4" r="2" />
-                        </svg>
-                    </a>
-                    <a href="#" class="footer-social-link" aria-label="YouTube">
+                    <a href="https://t.me/psuti" class="footer-social-link" aria-label="ПГУТИ Telegram" target="_blank"
+                        rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18"
                             height="18">
                             <path
-                                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z" />
-                            <polygon points="9.75,15.02 15.5,11.75 9.75,8.48" fill="#0c426f" />
+                                d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
                         </svg>
                     </a>
-                    <a href="#" class="footer-social-link" aria-label="GitHub">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18"
-                            height="18">
-                            <path
-                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    <a href="https://max.ru/vuz_schedule_bot" class="footer-social-link" aria-label="ПГУТИ MAX"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg width="18" height="18" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16.5" cy="16.5" r="16.5" fill="#083057" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.6994 25.7283C14.8778 25.7283 14.0312 25.4612 12.5597 24.3928C11.6289 25.5947 8.68141 26.534 8.55287 24.927C8.55287 23.7206 8.28693 22.7012 7.98554 21.5883C7.62652 20.2173 7.21875 18.6904 7.21875 16.478C7.21875 11.194 11.5358 7.21875 16.6507 7.21875C21.77 7.21875 25.7812 11.3898 25.7812 16.5269C25.7894 18.956 24.8378 21.289 23.1352 23.0141C21.4325 24.7392 19.1179 25.7153 16.6994 25.7283ZM16.7748 11.786C14.2838 11.6569 12.3425 13.3886 11.9125 16.104C11.558 18.3521 12.1874 21.0898 12.7237 21.2322C12.9807 21.2945 13.6278 20.7693 14.0312 20.3642C14.6981 20.8269 15.4748 21.1048 16.2828 21.1699C17.5235 21.2298 18.7381 20.7985 19.6656 19.9686C20.593 19.1387 21.1592 17.9764 21.2425 16.7317C21.291 15.4844 20.8501 14.2678 20.0145 13.3437C19.179 12.4196 18.0156 11.8619 16.7748 11.7905V11.786Z"
+                                fill="white" />
                         </svg>
                     </a>
                 </div>
-                <button class="footer-scroll-top" aria-label="Наверх">
+                <button class="footer-scroll-top" aria-label="Вернуться наверх">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
                         <line x1="12" y1="19" x2="12" y2="5" />

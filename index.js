@@ -16,6 +16,9 @@
         initFooterExpand();
         initPagination();
         initScrollTop();
+        initThemeToggle();
+        initAccessibilityToggle();
+        initHotkeys();
     });
 
     // ===== МОБИЛЬНОЕ МЕНЮ =====
@@ -511,7 +514,6 @@
             });
         });
         
-        // Показывать/скрывать кнопку при скролле
         const threshold = 400;
         
         const handleScroll = () => {
@@ -528,11 +530,110 @@
             }
         };
         
-        // Инициализация
         handleScroll();
         scrollTopBtn.style.transition = 'opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease';
         
         window.addEventListener('scroll', handleScroll, { passive: true });
+    }
+
+    // ===== ПЕРЕКЛЮЧЕНИЕ ТЕМЫ (СВЕТЛАЯ/ТЁМНАЯ) =====
+    function initThemeToggle() {
+        const themeToggle = document.getElementById('themeToggle');
+        if (!themeToggle) return;
+
+        const html = document.documentElement;
+        const sunIcon = themeToggle.querySelector('.theme-icon-sun');
+        const moonIcon = themeToggle.querySelector('.theme-icon-moon');
+
+        // Восстановление темы из localStorage
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        applyTheme(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            applyTheme(newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        function applyTheme(theme) {
+            html.setAttribute('data-theme', theme);
+            if (theme === 'dark') {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+                themeToggle.setAttribute('aria-label', 'Переключить на светлую тему');
+            } else {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+                themeToggle.setAttribute('aria-label', 'Переключить на тёмную тему');
+            }
+        }
+    }
+
+    // ===== ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ =====
+    function initAccessibilityToggle() {
+        const accessibilityToggle = document.getElementById('accessibilityToggle');
+        if (!accessibilityToggle) return;
+
+        accessibilityToggle.addEventListener('click', () => {
+            window.location.href = 'accessibility.html';
+        });
+    }
+
+    // ===== ГОРЯЧИЕ КЛАВИШИ =====
+    function initHotkeys() {
+        document.addEventListener('keydown', (e) => {
+            // Ctrl+Shift+T - переключить тему
+            if (e.ctrlKey && e.shiftKey && (e.key === 'T' || e.key === 't' || e.key === 'Е' || e.key === 'е')) {
+                e.preventDefault();
+                const themeToggle = document.getElementById('themeToggle');
+                if (themeToggle) {
+                    themeToggle.click();
+                }
+            }
+
+            // Ctrl+Shift+A - перейти к версии для слабовидящих
+            if (e.ctrlKey && e.shiftKey && (e.key === 'A' || e.key === 'a' || e.key === 'Ф' || e.key === 'ф')) {
+                e.preventDefault();
+                window.location.href = 'accessibility.html';
+            }
+
+            // Escape - закрыть меню/модалки
+            if (e.key === 'Escape') {
+                const mobileMenu = document.querySelector('.mobile-menu');
+                if (mobileMenu && mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                }
+
+                const searchBox = document.querySelector('.search-box');
+                if (searchBox && searchBox.classList.contains('active')) {
+                    searchBox.classList.remove('active');
+                }
+
+                const navMenu = document.querySelector('.nav-menu');
+                const mobileToggle = document.querySelector('.mobile-toggle');
+                if (navMenu && navMenu.classList.contains('active')) {
+                    closeMobileMenu(navMenu, mobileToggle, document.querySelectorAll('.has-dropdown'));
+                }
+            }
+
+            // S - фокус на поиск
+            if (e.key === 's' || e.key === 'S' || e.key === 'ы' || e.key === 'Ы') {
+                if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+                    e.preventDefault();
+                    const searchToggle = document.querySelector('.search-toggle');
+                    if (searchToggle) {
+                        searchToggle.click();
+                        setTimeout(() => {
+                            const searchInput = document.querySelector('.search-box input');
+                            if (searchInput) {
+                                searchInput.focus();
+                            }
+                        }, 100);
+                    }
+                }
+            }
+        });
     }
 
 })();

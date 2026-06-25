@@ -1,0 +1,394 @@
+/* === Базовые настройки === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+html[data-font-size="small"] {
+    font-size: 14px;
+}
+
+html[data-font-size="medium"] {
+    font-size: 18px;
+}
+
+html[data-font-size="large"] {
+    font-size: 24px;
+}
+
+/* === Цветовые схемы === */
+body {
+    background: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+}
+
+body[data-theme="inverted"] {
+    background: #000000;
+    color: #ffffff;
+}
+
+body[data-theme="brown"] {
+    background: #bba58a;
+    color: #000000;
+}
+
+/* === Панель управления === */
+.accessibility-panel {
+    background: #f5f5f5;
+    border-bottom: 2px solid #000;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+body[data-theme="inverted"] .accessibility-panel {
+    background: #1a1a1a;
+    border-bottom-color: #fff;
+}
+
+body[data-theme="brown"] .accessibility-panel {
+    background: #d4c4b0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.accessibility-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-label {
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+/* === Кнопки размера шрифта === */
+.font-size-btn {
+    padding: 8px 14px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.font-size-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.font-size-btn.active {
+    background: #000;
+    color: #fff;
+}
+
+.font-size-btn[data-size="small"] {
+    font-size: 12px;
+}
+
+.font-size-btn[data-size="medium"] {
+    font-size: 16px;
+}
+
+.font-size-btn[data-size="large"] {
+    font-size: 20px;
+}
+
+body[data-theme="inverted"] .font-size-btn {
+    background: #000;
+    color: #fff;
+    border-color: #fff;
+}
+
+body[data-theme="inverted"] .font-size-btn:hover,
+body[data-theme="inverted"] .font-size-btn.active {
+    background: #fff;
+    color: #000;
+}
+
+/* === Кнопки темы === */
+.theme-btn {
+    padding: 8px 16px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.theme-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.theme-btn.active {
+    background: #000;
+    color: #fff;
+}
+
+body[data-theme="inverted"] .theme-btn {
+    background: #000;
+    color: #fff;
+    border-color: #fff;
+}
+
+body[data-theme="inverted"] .theme-btn:hover,
+body[data-theme="inverted"] .theme-btn.active {
+    background: #fff;
+    color: #000;
+}
+
+/* === Чекбокс === */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 2px solid #000;
+}
+
+/* === Ссылка назад === */
+.back-link {
+    margin-left: auto;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.back-link:hover {
+    background: #000;
+    color: #fff;
+}
+
+body[data-theme="inverted"] .back-link {
+    background: #000;
+    color: #fff;
+    border-color: #fff;
+}
+
+body[data-theme="inverted"] .back-link:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* === Шапка === */
+.header {
+    background: #fff;
+    border-bottom: 2px solid #000;
+    padding: 20px 0;
+}
+
+body[data-theme="inverted"] .header {
+    background: #000;
+    border-bottom-color: #fff;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.site-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* === Навигация === */
+.simple-nav {
+    margin: 30px 0;
+    padding: 20px;
+    border: 2px solid #000;
+    background: #f9f9f9;
+}
+
+body[data-theme="inverted"] .simple-nav {
+    background: #1a1a1a;
+    border-color: #fff;
+}
+
+.simple-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.simple-nav a {
+    color: #0000cc;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.simple-nav a:hover,
+.simple-nav a:focus {
+    color: #cc0000;
+    outline: 2px solid #000;
+}
+
+body[data-theme="inverted"] .simple-nav a {
+    color: #66b3ff;
+}
+
+body[data-theme="inverted"] .simple-nav a:hover,
+body[data-theme="inverted"] .simple-nav a:focus {
+    color: #ff9999;
+}
+
+/* === Контент === */
+.content-section {
+    margin: 30px 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 30px 0 15px;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+ul {
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #0000cc;
+    text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+    color: #cc0000;
+    outline: 2px solid #000;
+}
+
+body[data-theme="inverted"] a {
+    color: #66b3ff;
+}
+
+body[data-theme="inverted"] a:hover,
+body[data-theme="inverted"] a:focus {
+    color: #ff9999;
+}
+
+address {
+    font-style: normal;
+    padding: 20px;
+    border: 2px solid #000;
+    background: #f9f9f9;
+}
+
+body[data-theme="inverted"] address {
+    background: #1a1a1a;
+    border-color: #fff;
+}
+
+address p {
+    margin-bottom: 10px;
+}
+
+/* === Подвал === */
+.footer {
+    margin-top: 50px;
+    padding: 30px 0;
+    border-top: 2px solid #000;
+    text-align: center;
+}
+
+body[data-theme="inverted"] .footer {
+    border-top-color: #fff;
+}
+
+/* === Скрытие изображений === */
+body.images-hidden img {
+    display: none;
+}
+
+/* === Фокус для клавиатуры === */
+*:focus-visible {
+    outline: 3px solid #ff0000;
+    outline-offset: 2px;
+}
+
+/* === Адаптивность === */
+@media (max-width: 768px) {
+    .accessibility-controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .back-link {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .simple-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+}
